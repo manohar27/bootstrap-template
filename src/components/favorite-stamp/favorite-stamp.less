@@ -1,6 +1,7 @@
 .favorite-stamp{
   border:1px solid #ccc;
   border-radius:5px;
+  height:200px;
   .favorite-list-group{
     display:inline;
     float:left;
@@ -12,7 +13,7 @@
       font-size: 32px;
       padding:4 4 4 4;
       border-radius:5px;
-      margin:8px;
+      margin:8 0 8 0;
     }
   }
   .my-fav-stamp{
@@ -29,11 +30,26 @@
 
 @media only screen and (max-width:600px){
   .favorite-stamp{
+    height:auto;
     .favorite-list-group{
       clear:both;
       .favorite-list-item{
         width:100%;
       }
+    }
+  }
+}
+@media only screen and (max-width:1000px){
+  .favorite-stamp{
+    height:auto;
+    .favorite-list-group{
+      display:block;
+      width:100%;
+    }
+    .my-fav-stamp {
+      p{
+      display:none;
+    }
     }
   }
 }

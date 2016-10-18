@@ -5,7 +5,7 @@
     padding-left: 12px;
     width:100%;
     height:50px;
-    display:inline;
+    display:block;
     margin-bottom:12px;
     .plus-icon:before{
       content: '+';
@@ -16,6 +16,7 @@
     }
     &:hover{
       text-decoration:underline;
+      background-image: linear-gradient(to top,#008cda,#fff);
       .plus-icon:before{
         transition: all 0.3s ease-in-out;
       }
@@ -25,7 +26,7 @@
     display:none;
   }
 
-  .hidden-footer-checkbox:checked{
+  .hidden-footer-checkbox:checked {
     ~ .footer-link-group{
       height:200px;
     }
@@ -62,6 +63,7 @@
   height:50px;
   margin-top:12px;
   background-color: #00294f;
+  text-align: center;
   border-top: 4px solid #00539f;
   .copyright{
     padding-left: 12px;

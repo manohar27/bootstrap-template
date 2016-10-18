@@ -1,31 +1,19 @@
 import React from 'react';
 const Carousel = (props) => (
       <div className="carousel-wrapper">
-  <span id="target-item-1"></span>
-  <span id="target-item-2"></span>
-  <span id="target-item-3"></span>
-  <div className="carousel-item item-1">
-    <a className="arrow arrow-prev" href="#target-item-3"></a>
-    <img src="Household.jpg" className="carousel-image" />
-    <a className="arrow arrow-next" href="#target-item-2"></a>
-    <span className="carousel-label"></span>
-    <i className="current-element" />
-  </div>
-  <div className="carousel-item item-2">
-    <a className="arrow arrow-prev" href="#target-item-1"></a>
-    <img src="Coffee.jpg" className="carousel-image" />
-    <a className="arrow arrow-next" href="#target-item-3"></a>
-    <span className="carousel-label"></span>
-    <i className="current-element" />
+      {props.imageList.map((item,index) =>
+      <div key={index} >
+        <span id={"target-item-"+(index+1)}> </span>
+        <div className={"carousel-item item-"+(index+1)}>
+          <a className="arrow arrow-prev" href={"#target-item-"+((index-1 <0 )? 3:index)}></a>
+          <img src={item} className="carousel-image" />
+          <a className="arrow arrow-next" href={"#target-item-"+((index+2)>3?1:index+2)}></a>
+          <span className="carousel-label"></span>
+          <i className="current-element" />
+        </div>
+      </div>
+    )}
 
-  </div>
-  <div className="carousel-item item-3">
-    <a className="arrow arrow-prev" href="#target-item-2"></a>
-    <img src="beverages.jpg" className="carousel-image" />
-    <a className="arrow arrow-next" href="#target-item-1"></a>
-    <span className="carousel-label"></span>
-    <i className="current-element" />
-  </div>
-</div>
+    </div>
     );
 export default Carousel;

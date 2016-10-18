@@ -4,23 +4,19 @@ import Carousel from '../carousel';
 import Stamp from '../stamp';
 import FavoriteStamp from '../favorite-stamp';
 import Footer from '../footer';
-const imageList = [{title:'Fruits', image:'fruits.jpg'},{title:'Dairy', image: 'dairy.jpg'},{title:'Cosmetics', image:'cosmetics.jpg'},
-{title:'Pasta', image:'pasta.jpg'},{title:'Dairy', image: 'dairy.jpg'},{title:'Dairy', image: 'dairy.jpg'}];
 
-const navList = ['Home','Products','About', 'Contact'];
 class Page extends React.Component {
-  constructor(props,context){
-    super(props,context);
-    this.state ={favorites:['Dairy', 'Cosmetics']};
+  constructor(props){
+    super(props);
+    const defaultFav = this.props.data.favList;
+    this.state ={favorites:defaultFav};
   }
   favoriteChanged(item){
-
     let fav = this.state.favorites;
     if(fav.indexOf(item)==-1){
       if(fav.length<3){
         fav.push(item);
-      }
-      else {
+      } else {
         fav.splice(0,1);
         fav.push(item);
       }
@@ -28,11 +24,14 @@ class Page extends React.Component {
   }
 }
   render(){
+    let data = this.props.data;
+    const imageList = data.imageList;
+    const navList = data.navList;
   return(
     <div >
-    <Header logo="Boombasket" navList={navList}/>
-    <Carousel imageList={imageList} />
-    <div className="grid" >
+    <Header logo={data.logo} navList={navList}/>
+    <Carousel imageList={data.carouselImages} />
+    <div className="grid">
     <div className="row">
       {imageList.map((item,index) => <Stamp favoriteChanged={this.favoriteChanged.bind(this)} key={index} image={item['image']} title={item['title']} /> )}
       <div className="col-6" >
@@ -40,12 +39,11 @@ class Page extends React.Component {
       </div>
     </div>
     <div className="row">
-      <div className="col-4" ><Footer label="Quick Links"/></div>
-      <div className="col-4" ><Footer label="More Links"/></div>
+      {data.footer.map((item,index) => <div key={index} className="col-4"><Footer label={item.label} items={item.items}/></div>)}
     </div>
     </div>
-    <div className="page-footer" >
-      <p className="copyright"> Copyright @jz21 </p>
+    <div className="page-footer">
+      <p className="copyright">data.copyright</p>
     </div>
     </div>);
 }
