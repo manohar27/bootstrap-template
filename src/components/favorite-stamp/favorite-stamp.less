@@ -1,0 +1,39 @@
+.favorite-stamp{
+  border:1px solid #ccc;
+  border-radius:5px;
+  .favorite-list-group{
+    display:inline;
+    float:left;
+    .favorite-list-item{
+      color:#fff;
+      background-color: #000;
+      opacity:0.6;
+      width:100%;
+      font-size: 32px;
+      padding:4 4 4 4;
+      border-radius:5px;
+      margin:8px;
+    }
+  }
+  .my-fav-stamp{
+    display:block;
+    text-align:center;
+    font-size:52px;
+    width:100%;
+    img{
+      width:25%;
+
+    }
+  }
+}
+
+@media only screen and (max-width:600px){
+  .favorite-stamp{
+    .favorite-list-group{
+      clear:both;
+      .favorite-list-item{
+        width:100%;
+      }
+    }
+  }
+}

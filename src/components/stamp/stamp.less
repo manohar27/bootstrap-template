@@ -1,0 +1,63 @@
+.stamp {
+  text-align: center;
+  display:inline-block;
+  position:relative;
+  color:white;
+
+  .stamp-link{
+    display:inline-block;
+    position:relative;
+    width:100%;
+    height:200px;
+    overflow:hidden;
+    text-decoration: none;
+    img {
+      width:100%;
+      height:100%;
+      border-radius: 5px;
+      transition: all .5s ease-in-out;
+      transition-delay: 0.2s;
+      object-fit:cover;
+    }
+  .fav-button{
+    position:absolute;
+    bottom:5px;
+    right:5px;
+    border-radius:50%;
+    color:#fff;
+    .heart-icon:before{
+      content: url(./heart.png);
+    }
+    &:hover{
+      background-color:red;
+    }
+  }
+  .stamp-label{
+    position:absolute;
+    bottom:0;
+    background-color: #333;
+    opacity: .9;
+    left:0;
+    width:100%;
+    color: #fff;
+    line-height:52px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    transition: background .3s ease-in-out;
+    transition-delay: 0.2s;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  &:hover {
+   img{
+    width:110%;
+    height:110%;
+
+  }
+   .stamp-label{
+    background-color: #008cda;
+  }
+  }
+}
+}

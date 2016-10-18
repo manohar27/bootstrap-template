@@ -1,0 +1,113 @@
+
+@media only screen and (max-width: 560px) {
+  .navbar {
+      height: 0;
+      overflow: hidden;
+      transition: height 0.5s ease-in-out;
+      .navbar-link{
+        color:white;
+        text-decoration:none;
+        display:block;
+        width:100%;
+        line-height:20px;
+        margin: 15px;
+        padding:8px;
+        font-size: 16px;
+        &:hover{
+          background-color: fade(#008cda,40%);
+        }
+      }
+  }
+
+  .navbar-right {
+    visibility: hidden;
+  }
+  .header {
+    background-color: #00294f;
+    border-bottom: 4px solid #00539f;
+    height:auto;
+    .checkBox-hidden{
+      visibility: hidden;
+    }
+    .logo {
+      text-decoration: none;
+      color:white;
+      font-weight: bold;
+      font-size: 24px;
+      padding: 8px;
+
+    }
+    .mobileMenu {
+      font-size: 24px;
+      cursor:pointer;
+      color: white;
+      padding: 4px;
+      float:right;
+    }
+    .checkBox-hidden:checked ~ .navbar{
+      height: 200px;
+    }
+
+  }
+}
+
+
+
+@media only screen and (min-width:561px) {
+  .navbar {
+    display:block;
+    position: absolute;
+    left: 150px;
+    top: 12px;
+    .navbar-link{
+      color:white;
+      float:left;
+      text-decoration: none;
+      border-left:2px solid fade(white,40%);
+      display:inline-block;
+      padding: 0 4 4 4;
+      font-family: sans-serif;
+      &:hover{
+        background-color: fade(#008cda,20%)
+      }
+    }
+
+  }
+  .navbar-right {
+    visibility: visible;
+    float:right;
+    .login-button{
+      position:absolute;
+      top:4px;
+      right:4px;
+      color:#fff;
+      text-decoration: none;
+      display:inline-block;
+      line-height: 32px;
+      font-family: sans-serif;
+    }
+  }
+  .header {
+    background-color: #00294f;
+    border-bottom: 4px solid #00539f;
+    height:50px;
+    .checkBox-hidden{
+      visibility: hidden;
+    }
+    .logo {
+      text-decoration: none;
+      color:white;
+      font-weight: bolder;
+      font-size: 24px;
+      float:left;
+      position:relative;
+      display:inline;
+      margin-right: 12px;
+      padding-top: 8px;
+
+    }
+    .mobileMenu{
+      visibility: hidden;
+    }
+}
+}

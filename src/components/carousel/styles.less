@@ -1,0 +1,182 @@
+.carousel-wrapper {
+  position: relative;
+  height:400px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.carousel-wrapper .carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.carousel-wrapper .carousel-item .arrow {
+  position: absolute;
+  top: 0px;
+  display: block;
+  width: 50px;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background: url("../arrow.png") 50% 50%/20px no-repeat;
+  background-position: center;
+  &:hover{
+    background-color: fade(grey,40%);
+
+  }
+
+}
+
+.carousel-wrapper .carousel-item .arrow.arrow-prev { left: 0; }
+
+.carousel-wrapper .carousel-item .arrow.arrow-next {
+
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 50px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  background-position: center;
+  &:hover{
+    background-color: fade(grey,40%);
+
+  }
+}
+
+
+
+.carousel-wrapper [id^="target-item"] { display: none; }
+
+.carousel-wrapper .item-1 {
+  z-index:2;
+  opacity: 1;
+  .carousel-image {
+    max-width: 100%;
+  }
+  text-align: center;
+  .current-element{
+    color: white;
+    font-size: 25px;
+  }
+}
+
+.carousel-wrapper .item-2 {
+  .carousel-image {
+    max-width: 100%;
+  }
+  .current-element{
+    color: white;
+    font-size: 25px;
+  }
+ }
+
+.carousel-wrapper .item-3 {
+  background-position: center;
+  .carousel-image {
+    max-width: 100%;
+  }
+  .current-element{
+    color: white;
+    font-size: 25px;
+  }
+}
+
+.carousel-wrapper *:target ~ .item-1 { opacity: 0; }
+
+.carousel-wrapper #target-item-1:target ~ .item-1 { opacity: 1; }
+
+.carousel-wrapper #target-item-2:target ~ .item-2,
+.carousel-wrapper #target-item-3:target ~ .item-3 {
+  z-index: 3;
+  opacity: 1;
+}
+
+.carousel-wrapper #target-item-1:target ~ .item-1 .current-element:before{
+  content: 'O o o';
+  position:absolute;
+  margin-top:5px;
+  background-color: fade(#666666,40%);
+  width:100%;
+  text-align: right;
+  right: 5px;
+  bottom: 0px;
+}
+.carousel-wrapper #target-item-2:target ~ .item-2 .current-element:before{
+  content: 'o O o';
+  position:absolute;
+  background-color: fade(#666666,40%);
+  width:100%;
+  text-align: right;
+  right: 5px;
+  bottom: 0px;
+}
+.carousel-wrapper #target-item-3:target ~ .item-3 .current-element:before{
+  content: 'o o O';
+  background-color: fade(#666666,40%);
+  width:100%;
+  text-align: right;
+  position:absolute;
+  right: 5px;
+  bottom: 0px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .carousel-wrapper{
+      height:300px;
+    }
+}
+
+@media only screen and (max-width: 560px){
+  .carousel-wrapper{
+    margin-top:30px;
+    height:250px;
+    * {
+      .carousel-image{
+        height:100%;
+      }
+    }
+  }
+  .carousel-wrapper .carousel-item .arrow {
+    position: absolute;
+    top: -120px;
+    display: block;
+    width: 50px;
+    height: 100%;
+    -webkit-tap-highlight-color: transparent;
+    background: url("../arrow.png") 50% 50%/20px no-repeat;
+    background-position: center;
+    &:hover{
+      background-color: fade(grey,40%);
+
+    }
+
+  }
+
+  .carousel-wrapper .carousel-item .arrow.arrow-prev {left:45%; right: 45%; transform: rotate(90deg); }
+
+  .carousel-wrapper .carousel-item .arrow.arrow-next {
+
+    position: absolute;
+    top: 70px;
+    right: 45%;
+    left:45%;
+    height: 100%;
+    width: 50px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(270deg);
+    background-position: center;
+    &:hover{
+      background-color: fade(grey,40%);
+
+    }
+  }
+
+}
