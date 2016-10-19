@@ -14,21 +14,30 @@
       font-size:32px;
       font-weight:bolder;
     }
-    &:hover{
+    &:hover, &:focus{
       text-decoration:underline;
-      background-image: linear-gradient(to top,#008cda,#fff);
+      background-image: linear-gradient(to bottom,#008cda,#fff);
       .plus-icon:before{
         transition: all 0.3s ease-in-out;
       }
     }
   }
   .hidden-footer-checkbox{
-    display:none;
+    opacity:0;
+    &:focus ~ .group-label {
+      background-image: linear-gradient(to bottom,#008cda,#fff);
+
+    }
   }
 
   .hidden-footer-checkbox:checked {
     ~ .footer-link-group{
       height:200px;
+      .link{
+        a{
+          display:block;
+        }
+      }
     }
     ~ .group-label .plus-icon:before{
       transform: rotate(180deg);
@@ -46,13 +55,13 @@
     padding-left: 12px;
     a{
     text-decoration:none;
-    display:block;
+    display:none;
     color: #666666;
     font-size:20px;
     margin-top:12px;
     background-color: fade(#ccc,30%);
     width:100%;
-    &:hover{
+    &:hover,&:focus{
       background-color: fade(#008cda,30%);
     }
   }
@@ -77,20 +86,29 @@
 @media only screen and (min-width:700px){
   .group-label{
     pointer-events:none;
+    padding-left:0px;
     .plus-icon{
       display:none;
     }
 }
+  .hidden-footer-checkbox{
+    display:none;
+  }
   .footer-link-group{
     height:auto;
     overflow: visible;
     .link {
+      padding-left:0px;
+
       a{
-      background-color: #f6f6f6;
-    }
-    a:hover{
+        display:block;
+        &:hover,&:focus{
       text-decoration:underline;
+      background-color: #f6f6f6;
+
     }
+    }
+
   }
 }
 }

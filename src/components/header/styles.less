@@ -7,7 +7,7 @@
       .navbar-link{
         color:white;
         text-decoration:none;
-        display:block;
+        display:none;
         width:100%;
         line-height:20px;
         margin: 15px;
@@ -27,7 +27,10 @@
     border-bottom: 4px solid #00539f;
     height:auto;
     .checkBox-hidden{
-      visibility: hidden;
+      opacity: 0;
+      &:focus ~ .mobileMenu{
+          background-color: fade(#008cda,40%);
+        }
     }
     .logo {
       text-decoration: none;
@@ -41,11 +44,18 @@
       font-size: 24px;
       cursor:pointer;
       color: white;
-      padding: 4px;
+      font-weight:bold;
+      padding: 4px 8px 4px 8px;
       float:right;
+      &:hover, &:focus{
+        background-color: fade(#008cda,40%);
+      }
     }
     .checkBox-hidden:checked ~ .navbar{
       height: 200px;
+      .navbar-link{
+        display:block;
+      }
     }
 
   }
@@ -70,12 +80,11 @@
       float:left;
       line-height:46px;
       text-decoration: none;
-      border-left:2px solid fade(white,40%);
       display:inline-block;
-      padding: 4 4 4 4;
+      padding: 4px 12px 4px 12px;
       margin-bottom:20px;
       font-family: sans-serif;
-      &:hover{
+      &:hover, &:focus{
         background-color: fade(#008cda,20%)
       }
     }
@@ -89,10 +98,14 @@
       top:4px;
       right:4px;
       color:#fff;
+      padding:4px 12px 4px 12px;
       text-decoration: none;
       display:inline-block;
       line-height: 32px;
       font-family: sans-serif;
+      &:hover, &:focus{
+        background-color: fade(#008cda,20%)
+      }
     }
   }
   .header {
@@ -111,8 +124,7 @@
       position:relative;
       display:inline;
       margin-right: 4px;
-      padding-top: 8px;
-      padding-left:8px;
+      padding:12px 4px 12px 8px;
 
     }
     .mobileMenu{

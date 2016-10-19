@@ -10,6 +10,8 @@ class Page extends React.Component {
     super(props);
     const defaultFav = this.props.data.favList;
     this.state ={favorites:defaultFav};
+    this.favoriteChanged = this.favoriteChanged.bind(this);
+    this.removeFav = this.removeFav.bind(this);
   }
   favoriteChanged(item){
     let fav = this.state.favorites;
@@ -23,6 +25,13 @@ class Page extends React.Component {
       this.setState({favorites:fav});
   }
 }
+ removeFav(name){
+   let fav = this.state.favorites;
+   let pos = fav.indexOf(name);
+   fav.splice(pos,1);
+   this.setState({favorites:fav});
+ }
+
   render(){
     let data = this.props.data;
     const imageList = data.imageList;
@@ -30,20 +39,20 @@ class Page extends React.Component {
   return(
     <div >
     <Header logo={data.logo} navList={navList}/>
-    <Carousel imageList={data.carouselImages} />
     <div className="grid">
+    <Carousel imageList={data.carouselImages} />
     <div className="row">
       {imageList.map((item,index) => <Stamp favoriteChanged={this.favoriteChanged.bind(this)} key={index} image={item['image']} title={item['title']} /> )}
       <div className="col-6" >
-        <FavoriteStamp items={this.state.favorites} />
+        <FavoriteStamp items={this.state.favorites} removeFav={this.removeFav} />
       </div>
     </div>
     <div className="row">
-      {data.footer.map((item,index) => <div key={index} className="col-4"><Footer label={item.label} items={item.items}/></div>)}
+      {data.footer.map((item,index) => <div key={index} className="col-3"><Footer label={item.label} items={item.items}/></div>)}
     </div>
     </div>
     <div className="page-footer">
-      <p className="copyright">data.copyright</p>
+      <p className="copyright">{data.copyright}</p>
     </div>
     </div>);
 }

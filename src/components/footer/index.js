@@ -1,8 +1,8 @@
 import React from 'react';
 const Footer = (props) => (
       <div >
-        <input type="checkbox" className="hidden-footer-checkbox" id={"hidden-footer"+"-"+props.label}/>
-        <label  htmlFor={"hidden-footer"+"-"+props.label } className="group-label">{props.label}
+        <input type="checkbox" className="hidden-footer-checkbox" id={"hidden-footer"+"-"+props.label.replace(/\s+/g, '')}/>
+        <label  htmlFor={"hidden-footer"+"-"+props.label.replace(/\s+/g, '')} className="group-label">{props.label}
           <span className="plus-icon" />
         </label>
         <ul className="footer-link-group">

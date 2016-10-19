@@ -1,14 +1,13 @@
 import React from 'react';
 import {render} from 'react-dom';
 import Page from './components/page';
-import config from './mock-content';
-class App extends React.Component {
-  render () {
-    return (
-    <Page data={config}/>
+import data from './mock-content';
+//import getContent from '../fetch';
+//let props = getContent('http://localhost:3000/mock-content.json');
+//console.log(props);
+const App = (props) =>(
+    <Page data={data}/>
     );
-  }
-}
 
 export default App;
 

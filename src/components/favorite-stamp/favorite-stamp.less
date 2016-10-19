@@ -2,6 +2,17 @@
   border:1px solid #ccc;
   border-radius:5px;
   height:200px;
+  .no-fav{
+    color:#fff;
+    background-color: #000;
+    opacity:0.6;
+    width:100%;
+    font-size: 32px;
+    padding:4px 4px 4px 4px;
+    border-radius:5px;
+    display:block;
+    text-align: center;
+  }
   .favorite-list-group{
     display:inline;
     float:left;
@@ -11,9 +22,31 @@
       opacity:0.6;
       width:100%;
       font-size: 32px;
-      padding:4 4 4 4;
+      padding:4px 4px 4px 4px;
       border-radius:5px;
-      margin:8 0 8 0;
+      margin:8px 0px 8px 0px;
+      .close-icon{
+        line-height: 20px;
+        background-image:url('./remove.png');
+        background-size: 30px;
+        background-repeat-y:no-repeat;
+        background-repeat-x:no-repeat;
+        height:35px;
+        width:35px;
+        padding:0px 2px 0px 0px;
+        margin-top:0;
+        float:right;
+        &:hover {
+          border:1px solid #cc3333;
+          background-position: center;
+          color: #cc3333;
+        }
+      }
+      p{
+        padding-right: 12px;
+        display:inline-block;
+      }
+      
     }
   }
   .my-fav-stamp{
@@ -35,6 +68,7 @@
       clear:both;
       .favorite-list-item{
         width:100%;
+
       }
     }
   }
@@ -50,6 +84,16 @@
       p{
       display:none;
     }
+    }
+  }
+}
+
+@media only screen and (min-width:1200px){
+  .favorite-stamp{
+    .my-fav-stamp{
+      img{
+        width:15%;
+      }
     }
   }
 }

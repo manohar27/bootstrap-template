@@ -19,7 +19,7 @@
 .carousel-wrapper .carousel-item .arrow {
   position: absolute;
   top: 0px;
-  display: block;
+  display: none;
   width: 50px;
   height: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -31,7 +31,9 @@
   }
 
 }
-
+.carousel-wrapper .carousel-item.item-1 .arrow {
+  display:block;
+}
 .carousel-wrapper .carousel-item .arrow.arrow-prev { left: 0; }
 
 .carousel-wrapper .carousel-item .arrow.arrow-next {
@@ -43,7 +45,6 @@
   width: 50px;
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
-  background-position: center;
   &:hover{
     background-color: fade(grey,40%);
 
@@ -55,11 +56,12 @@
 .carousel-wrapper [id^="target-item"] { display: none; }
 
 .carousel-wrapper .item-1 {
+
   z-index:2;
   opacity: 1;
   .carousel-image {
     width: 100%;
-    height:200%;
+    height:100%;
   }
   text-align: center;
   .current-element{
@@ -69,9 +71,12 @@
 }
 
 .carousel-wrapper .item-2 {
+  .arrow{
+    display:none;
+  }
   .carousel-image {
     width: 100%;
-    height:150%;
+    height:100%;
   }
   .current-element{
     color: white;
@@ -80,10 +85,13 @@
  }
 
 .carousel-wrapper .item-3 {
+  .arrow{
+    display:none;
+  }
   background-position: center;
   .carousel-image {
     width: 100%;
-    height:150%;
+    height:100%;
   }
   .current-element{
     color: white;
@@ -93,12 +101,20 @@
 
 .carousel-wrapper *:target ~ .item-1 { opacity: 0; }
 
-.carousel-wrapper #target-item-1:target ~ .item-1 { opacity: 1; }
+.carousel-wrapper #target-item-1:target ~ .item-1 { 
+  opacity: 1;  
+  .arrow {
+    display:block;
+  }
+}
 
 .carousel-wrapper #target-item-2:target ~ .item-2,
 .carousel-wrapper #target-item-3:target ~ .item-3 {
   z-index: 3;
   opacity: 1;
+  .arrow {
+    display:block;
+  }
 }
 
 .carousel-wrapper #target-item-1:target ~ .item-1 .current-element:before{
@@ -133,21 +149,26 @@
 @media only screen and (max-width: 1000px) {
 
     .carousel-wrapper{
-      height:300px;
+      height:380px;
       .carousel-item{
         padding:4;
       }
     }
 }
-
+@media only screen and (min-width:1200px){
+  .carousel-wrapper{
+    height:400px;
+  }
+}
 @media only screen and (max-width: 560px){
   .carousel-wrapper{
     margin-top:30px;
     height:280px;
     overflow:hidden;
-    * {
+    .item-1, .item-2, .item-3 {
       .carousel-image{
-        max-width:150%;
+        width:550px;
+        height:300px;
       }
     }
   }
@@ -175,7 +196,7 @@
     top: 120px;
     right: 45%;
     left:45%;
-    z-index:5;
+    z-index:4;
     height: 100%;
     width: 50px;
     -webkit-transform: rotate(180deg);
