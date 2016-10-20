@@ -4,8 +4,21 @@
   display:inline-block;
   position:relative;
   color:white;
-
-  .stamp-link{
+  .fav-button{
+    position:absolute;
+    bottom:20px;
+    right:20px;
+    color:#fff;
+    height:35px;
+    width:35px;
+    border:none;
+    background-image: url(./heart.png);
+    background-color:transparent;
+    &:hover{
+      background-image:url(./heart-colored.png);
+    }
+  }
+  .stamp-link{ 
     display:inline-block;
     position:relative;
     width:100%;
@@ -20,19 +33,6 @@
       transition-delay: 0.2s;
       object-fit:cover;
     }
-  .fav-button{
-    position:absolute;
-    bottom:5px;
-    right:5px;
-    color:#fff;
-    height:35px;
-    width:35px;
-    background-image: url(./heart.png);
-    background-color:transparent;
-    &:hover{
-      background-image:url(./heart-colored.png);
-    }
-  }
   .stamp-label{
     position:absolute;
     bottom:0;
