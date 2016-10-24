@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 
 class FavoriteStamp extends React.Component {
   constructor(props) {
@@ -17,10 +19,15 @@ class FavoriteStamp extends React.Component {
     return (
       <div className="favorite-stamp">
         <ul className="favorite-list-group">
-          {this.props.items.map((item, index) => <li key={index} className="favorite-list-item">
-            <p>{item}</p>
-            <button onClick={() => this.removeFav(item)} className="close-icon" />
-          </li>)}
+          <ReactCSSTransitionGroup
+                    transitionName="example"
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={300}>
+                    {this.props.items.map((item, index) => <li key={index} className="favorite-list-item">
+                      <p>{item}</p>
+                      <button onClick={() => this.removeFav(item)} className="close-icon" />
+                    </li>)}
+          </ReactCSSTransitionGroup>`
         </ul>
         {noFav}
         <div className="my-fav-stamp">

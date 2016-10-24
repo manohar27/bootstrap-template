@@ -1,3 +1,4 @@
+@import '../colors.less';
 
 @media only screen and (max-width: 560px) {
   .navbar {
@@ -17,7 +18,7 @@
         font-size: 16px;
         transition:visibility 0.5s ease-in-out, all 0.5s ease-in-out;
         &:hover, &:focus{
-          background-color: fade(#008cda,40%);
+          background-color: fade(@blue1,40%);
         }
       }
   }
@@ -26,13 +27,13 @@
     visibility: hidden;
   }
   .header {
-    background-color: #00294f;
-    border-bottom: 4px solid #00539f;
+    background-color: @blue2;
+    border-bottom: 4px solid @blue3;
     height:auto;
     .checkBox-hidden{
       opacity: 0;
       &:focus ~ .mobileMenu{
-          background-color: fade(#008cda,40%);
+          background-color: fade(@blue1,40%);
         }
     }
     .logo {
@@ -51,7 +52,7 @@
       padding: 4px 8px 4px 8px;
       float:right;
       &:hover, &:focus{
-        background-color: fade(#008cda,40%);
+        background-color: fade(@blue1,40%);
       }
     }
     .checkBox-hidden:checked ~ .navbar{
@@ -91,7 +92,7 @@
       transition:all 0.5s linear;
       &:hover, &:focus{
         text-decoration: underline;
-        background-color: fade(#008cda,20%)
+        background-color: fade(@blue1,20%)
       }
     }
 
@@ -103,20 +104,20 @@
       position:absolute;
       top:4px;
       right:4px;
-      color:#fff;
+      color:@white;
       padding:4px 12px 4px 12px;
       text-decoration: none;
       display:inline-block;
       line-height: 32px;
       font-family: sans-serif;
       &:hover, &:focus{
-        background-color: fade(#008cda,20%)
+        background-color: fade(@blue1,20%)
       }
     }
   }
   .header {
-    background-color: #00294f;
-    border-bottom: 4px solid #00539f;
+    background-color: @blue2;
+    border-bottom: 4px solid @blue3;
     height:50px;
     .checkBox-hidden{
       visibility: hidden;

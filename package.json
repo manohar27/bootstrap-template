@@ -40,6 +40,7 @@
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "react": "^15.3.2",
+    "react-addons-css-transition-group": "^15.3.2",
     "react-addons-test-utils": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-shallow-testutils": "^2.0.0",

@@ -1,11 +1,11 @@
+@import '../colors.less';
 .carousel-wrapper {
   position: relative;
   height:400px;
   text-align: center;
   margin-top: 12px;
   overflow:hidden;
-  box-shadow: 0 0 8px 0 #666;
-
+  box-shadow: 0px 0px 8px 0px @grey2;
 }
 
 .carousel-wrapper .carousel-item {
@@ -21,13 +21,13 @@
     bottom: 0px;
     left: 0px;
     display: block;
-    color: #fff;
+    color: @white;
     font-size: 45px;
     opacity: 0.75;
     margin: 12px;
     box-shadow: 2px 2px 15px 8px;
     border-radius: 20px;
-    background-color: #666;
+    background-color: @grey2;
     padding: 8px;
   }
 }
@@ -95,7 +95,7 @@
     height:100%;
   }
   .current-element{
-    color: white;
+    color: @white;
     font-size: 25px;
   }
  }

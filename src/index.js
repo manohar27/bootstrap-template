@@ -3,6 +3,10 @@ import {render} from 'react-dom';
 import Page from './components/page';
 
 const App = props => (<Page data={props.data} />);
+
+App.propTypes = {
+  data: React.PropTypes.object
+};
 export default App;
 
 if (typeof document !== 'undefined') {

@@ -1,3 +1,4 @@
+@import '../colors.less';
 
 .group-label{
     font-weight:bold;
@@ -18,13 +19,13 @@
     }
     &:hover, &:focus{
       text-decoration:underline;
-      background-image: linear-gradient(to bottom,#008cda,#fff);
+      background-image: linear-gradient(to bottom,@blue1,@white);
     }
   }
   .hidden-footer-checkbox{
     opacity:0;
     &:focus ~ .group-label {
-      background-image: linear-gradient(to bottom,#008cda,#fff);
+      background-image: linear-gradient(to bottom,@blue1,@white);
 
     }
   }
@@ -55,13 +56,13 @@
     a{
     text-decoration:none;
     display:none;
-    color: #666666;
+    color: @grey2;
     font-size:20px;
     margin-top:12px;
     width:100%;
     transition: all 0.3s ease-in-out;
     &:hover,&:focus{
-      background-color: fade(#008cda,30%);
+      background-color: fade(@blue1,30%);
     }
   }
   }
@@ -70,14 +71,14 @@
 .page-footer{
   height:50px;
   margin-top:12px;
-  background-color: #00294f;
+  background-color: @blue2;
   text-align: center;
-  border-top: 4px solid #00539f;
+  border-top: 4px solid @blue3;
   .copyright{
     padding-left: 12px;
     font-size: 16px;
     font-weight: bold;
-    color: #fff;
+    color: @white;
   }
 }
 

@@ -1,24 +1,49 @@
+@import '../colors.less';
+
+
 .favorite-stamp{
-  border:1px solid #ccc;
+  border:1px solid @grey1;
   border-radius:5px;
   height:200px;
   .no-fav{
-    color:#fff;
-    background-color: #000;
+    color:@white;
+    background-color: @black;
     opacity:0.6;
     width:100%;
     font-size: 32px;
     padding:4px 4px 4px 4px;
     border-radius:5px;
     display:block;
+    clear: both;
     text-align: center;
   }
   .favorite-list-group{
     display:inline;
+    width:50%;
     float:left;
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+
     .favorite-list-item{
-      color:#fff;
-      background-color: #000;
+      color:@white;
+      background-color: @black;
       opacity:0.6;
       width:100%;
       font-size: 32px;
@@ -32,7 +57,7 @@
         background-repeat-y:no-repeat;
         background-repeat-x:no-repeat;
         background-position: center;
-        border: 1px solid #000;
+        border: 1px solid @black;
         border-radius:50%;
         height:35px;
         width:35px;
@@ -41,8 +66,8 @@
         float:right;
         transition:all .3s ease-in-out;
         &:hover,&:focus {
-          border:1px solid #cc3333;
-          box-shadow: 0 0 10px 0 #cc3333;
+          border:1px solid @red1;
+          box-shadow: 0 0 10px 0 @red1;
           background-position: center;
         }
       }
