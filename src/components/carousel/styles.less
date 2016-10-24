@@ -4,6 +4,8 @@
   text-align: center;
   margin-top: 12px;
   overflow:hidden;
+  box-shadow: 0 0 8px 0 #666;
+
 }
 
 .carousel-wrapper .carousel-item {
@@ -14,6 +16,20 @@
   right: 0;
   opacity: 0;
   transition: all 0.5s ease-in-out;
+  .carousel-label{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: block;
+    color: #fff;
+    font-size: 45px;
+    opacity: 0.75;
+    margin: 12px;
+    box-shadow: 2px 2px 15px 8px;
+    border-radius: 20px;
+    background-color: #666;
+    padding: 8px;
+  }
 }
 
 .carousel-wrapper .carousel-item .arrow {
@@ -121,7 +137,6 @@
   content: 'O o o';
   position:absolute;
   margin-top:5px;
-  background-color: fade(#666666,40%);
   width:100%;
   text-align: right;
   right: 5px;
@@ -130,7 +145,6 @@
 .carousel-wrapper #target-item-2:target ~ .item-2 .current-element:before{
   content: 'o O o';
   position:absolute;
-  background-color: fade(#666666,40%);
   width:100%;
   text-align: right;
   right: 5px;
@@ -138,7 +152,6 @@
 }
 .carousel-wrapper #target-item-3:target ~ .item-3 .current-element:before{
   content: 'o o O';
-  background-color: fade(#666666,40%);
   width:100%;
   text-align: right;
   position:absolute;
@@ -162,13 +175,16 @@
 }
 @media only screen and (max-width: 560px){
   .carousel-wrapper{
-    margin-top:30px;
+    margin:30px 5px 5px 5px;
     height:280px;
     overflow:hidden;
     .item-1, .item-2, .item-3 {
       .carousel-image{
         width:550px;
         height:300px;
+      }
+      .carousel-label{
+        display:none;
       }
     }
   }

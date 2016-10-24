@@ -1,13 +1,13 @@
 import React from 'react';
 
 const Footer = props => (
-  <div>
+  <div className="footer">
     <input type="checkbox" className="hidden-footer-checkbox" id={`hidden-footer-${props.label.replace(/\s+/g, '')}`} />
     <label htmlFor={`hidden-footer-${props.label.replace(/\s+/g, '')}`} className="group-label">{props.label}
       <span className="plus-icon" />
     </label>
     <ul className="footer-link-group">
-      {props.items.map((item, index) => <li className="link" key={index}><a href={item}>{item}</a></li>)}
+      {props.items.map((item, index) => <li className="link" key={index}><a href={item.replace(/\s+/g, '')}>{item}</a></li>)}
     </ul>
 
   </div>

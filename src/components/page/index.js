@@ -11,11 +11,8 @@ class Page extends React.Component {
     this.favoriteChanged = this.favoriteChanged.bind(this);
     const defaultFav = this.props.data.favList;
     this.state = {favorites: defaultFav};
+    this.removeFav = this.removeFav.bind(this);
   }
-  componentWillMount() {
-   //this.state = {favorites: ['Default Favorite']}; 
-  }
-
   favoriteChanged(item) {
     const fav = this.state.favorites;
     if (fav.indexOf(item) === -1) {
@@ -47,7 +44,7 @@ class Page extends React.Component {
         <div className="row">
           {imageList.map((item, index) => <Stamp favoriteChanged={this.favoriteChanged} key={index} image={item.image} title={item.title} />)}
           <div className="col-6" >
-            <FavoriteStamp  items={this.state.favorites} removeFav={this.removeFav.bind(this)} />
+            <FavoriteStamp  items={this.state.favorites} removeFav={this.removeFav} />
           </div>
         </div>
         <div className="row">

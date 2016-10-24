@@ -28,18 +28,22 @@
       .close-icon{
         line-height: 20px;
         background-image:url('./remove.png');
-        background-size: 30px;
+        background-size: 20px;
         background-repeat-y:no-repeat;
         background-repeat-x:no-repeat;
+        background-position: center;
+        border: 1px solid #000;
+        border-radius:50%;
         height:35px;
         width:35px;
         padding:0px 2px 0px 0px;
         margin-top:0;
         float:right;
-        &:hover {
+        transition:all .3s ease-in-out;
+        &:hover,&:focus {
           border:1px solid #cc3333;
+          box-shadow: 0 0 10px 0 #cc3333;
           background-position: center;
-          color: #cc3333;
         }
       }
       p{
@@ -88,7 +92,7 @@
   }
 }
 
-@media only screen and (min-width:1200px){
+@media only screen and (min-width:1001px){
   .favorite-stamp{
     .my-fav-stamp{
       img{

@@ -19,7 +19,7 @@ class FavoriteStamp extends React.Component {
         <ul className="favorite-list-group">
           {this.props.items.map((item, index) => <li key={index} className="favorite-list-item">
             <p>{item}</p>
-            <button onClick={this.removeFav.bind(this, item)} className="close-icon" />
+            <button onClick={() => this.removeFav(item)} className="close-icon" />
           </li>)}
         </ul>
         {noFav}

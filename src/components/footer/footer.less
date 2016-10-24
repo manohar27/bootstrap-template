@@ -7,19 +7,18 @@
     height:50px;
     display:block;
     margin-bottom:12px;
+    margin-top: -25px;
     .plus-icon:before{
       content: '+';
       float:right;
       padding:4 8 4 8;
       font-size:32px;
       font-weight:bolder;
+      transition: all 0.3s ease-in-out;
     }
     &:hover, &:focus{
       text-decoration:underline;
       background-image: linear-gradient(to bottom,#008cda,#fff);
-      .plus-icon:before{
-        transition: all 0.3s ease-in-out;
-      }
     }
   }
   .hidden-footer-checkbox{
@@ -59,8 +58,8 @@
     color: #666666;
     font-size:20px;
     margin-top:12px;
-    background-color: fade(#ccc,30%);
     width:100%;
+    transition: all 0.3s ease-in-out;
     &:hover,&:focus{
       background-color: fade(#008cda,30%);
     }
@@ -102,13 +101,13 @@
 
       a{
         display:block;
+        transition: all 0.5s ease-in-out;
+
         &:hover,&:focus{
       text-decoration:underline;
-      background-color: #f6f6f6;
-
+      background-color: transparent;
     }
     }
-
   }
 }
 }

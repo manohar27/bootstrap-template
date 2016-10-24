@@ -7,13 +7,16 @@
       .navbar-link{
         color:white;
         text-decoration:none;
-        display:none;
+        opacity:0;
+        display:block;
+        visibility: hidden;
         width:100%;
         line-height:20px;
         margin: 15px;
         padding:8px;
         font-size: 16px;
-        &:hover{
+        transition:visibility 0.5s ease-in-out, all 0.5s ease-in-out;
+        &:hover, &:focus{
           background-color: fade(#008cda,40%);
         }
       }
@@ -54,7 +57,8 @@
     .checkBox-hidden:checked ~ .navbar{
       height: 200px;
       .navbar-link{
-        display:block;
+        visibility: visible;
+        opacity:1;
       }
     }
 
@@ -84,7 +88,9 @@
       padding: 4px 12px 4px 12px;
       margin-bottom:20px;
       font-family: sans-serif;
+      transition:all 0.5s linear;
       &:hover, &:focus{
+        text-decoration: underline;
         background-color: fade(#008cda,20%)
       }
     }
