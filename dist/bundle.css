@@ -163,14 +163,15 @@ table {
   position: absolute;
   top: 0px;
   display: none;
-  width: 50px;
+  width: 100px;
   height: 100%;
   -webkit-tap-highlight-color: transparent;
   background: url("../arrow.png") 50% 2.5% no-repeat;
   background-position: center;
+  transition: all 0.5s ease-in-out;
 }
 .carousel-wrapper .carousel-item .arrow:hover {
-  background-color: rgba(128, 128, 128, 0.4);
+  background-image: url(arrow.png), linear-gradient(to right, #008cda, transparent);
 }
 .carousel-wrapper .carousel-item.item-1 .arrow {
   display: block;
@@ -183,12 +184,9 @@ table {
   top: 0px;
   right: 0px;
   height: 100%;
-  width: 50px;
+  width: 100px;
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
-}
-.carousel-wrapper .carousel-item .arrow.arrow-next:hover {
-  background-color: rgba(128, 128, 128, 0.4);
 }
 .carousel-wrapper [id^="target-item"] {
   display: none;
@@ -314,9 +312,6 @@ table {
     background: url("../arrow.png") 50% 2.5% no-repeat;
     background-position: center;
   }
-  .carousel-wrapper .carousel-item .arrow:hover {
-    background-color: rgba(128, 128, 128, 0.4);
-  }
   .carousel-wrapper .carousel-item .arrow.arrow-prev {
     left: 45%;
     right: 45%;
@@ -334,10 +329,8 @@ table {
     transform: rotate(270deg);
     background-position: center;
   }
-  .carousel-wrapper .carousel-item .arrow.arrow-next:hover {
-    background-color: rgba(128, 128, 128, 0.4);
-  }
 }
+
 
 .favorite-stamp {
   border: 1px solid #ccc;
@@ -576,7 +569,24 @@ table {
     background-color: rgba(0, 140, 218, 0.4);
   }
   .navbar-right {
+    height: 0px;
+    overflow: hidden;
+  }
+  .navbar-right a {
+    color: white;
+    text-decoration: none;
+    opacity: 0;
     visibility: hidden;
+    width: 100%;
+    line-height: 20px;
+    margin: 15px;
+    padding: 8px;
+    font-size: 16px;
+    transition: visibility 0.5s ease-in-out, all 0.5s ease-in-out;
+  }
+  .navbar-right a:hover,
+  .navbar-right a:focus {
+    background-color: rgba(0, 140, 218, 0.4);
   }
   .header {
     background-color: #00294f;
@@ -594,14 +604,14 @@ table {
     color: white;
     font-weight: bold;
     font-size: 24px;
-    padding: 8px;
+    padding: 20px 8px 4px 4px;
   }
   .header .mobileMenu {
     font-size: 24px;
     cursor: pointer;
     color: white;
     font-weight: bold;
-    padding: 4px 8px 4px 8px;
+    padding: 8px 8px 4px 8px;
     float: right;
   }
   .header .mobileMenu:hover,
@@ -614,6 +624,11 @@ table {
   .header .checkBox-hidden:checked ~ .navbar .navbar-link {
     visibility: visible;
     opacity: 1;
+  }
+  .header .checkBox-hidden:checked ~ .navbar-right a {
+    visibility: visible;
+    opacity: 1;
+    display: block;
   }
 }
 @media only screen and (min-width: 561px) {

@@ -22424,8 +22424,7 @@
 	                  }, className: 'close-icon' })
 	              );
 	            })
-	          ),
-	          '`'
+	          )
 	        ),
 	        noFav,
 	        _react2.default.createElement(

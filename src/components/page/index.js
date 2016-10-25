@@ -13,6 +13,7 @@ class Page extends React.Component {
     this.state = {favorites: defaultFav};
     this.removeFav = this.removeFav.bind(this);
   }
+
   favoriteChanged(item) {
     const fav = this.state.favorites;
     if (fav.indexOf(item) === -1) {

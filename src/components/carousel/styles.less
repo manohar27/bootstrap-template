@@ -36,14 +36,14 @@
   position: absolute;
   top: 0px;
   display: none;
-  width: 50px;
+  width: 100px;
   height: 100%;
   -webkit-tap-highlight-color: transparent;
   background: url("../arrow.png") 50% 50%/20px no-repeat;
   background-position: center;
+  transition: all 0.5s ease-in-out;
   &:hover{
-    background-color: fade(grey,40%);
-
+    background-image: url(arrow.png), linear-gradient(to right,#008cda,transparent)
   }
 
 }
@@ -58,13 +58,9 @@
   top: 0px;
   right: 0px;
   height: 100%;
-  width: 50px;
+  width: 100px;
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
-  &:hover{
-    background-color: fade(grey,40%);
-
-  }
 }
 
 
@@ -197,11 +193,6 @@
     -webkit-tap-highlight-color: transparent;
     background: url("../arrow.png") 50% 50%/20px no-repeat;
     background-position: center;
-    &:hover{
-      background-color: fade(grey,40%);
-
-    }
-
   }
 
   .carousel-wrapper .carousel-item .arrow.arrow-prev {left:45%; right: 45%; transform: rotate(90deg); }
@@ -218,10 +209,6 @@
     -webkit-transform: rotate(180deg);
     transform: rotate(270deg);
     background-position: center;
-    &:hover{
-      background-color: fade(grey,40%);
-
-    }
   }
 
 }

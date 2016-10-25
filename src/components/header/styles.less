@@ -23,9 +23,25 @@
       }
   }
 
-  .navbar-right {
-    visibility: hidden;
+  .navbar-right{ 
+    height:0px;
+    overflow: hidden;
+    a{
+    color:white;
+        text-decoration:none;
+        opacity:0;
+        visibility: hidden;
+        width:100%;
+        line-height:20px;
+        margin: 15px;
+        padding:8px;
+        font-size: 16px;
+        transition:visibility 0.5s ease-in-out, all 0.5s ease-in-out;
+        &:hover, &:focus{
+          background-color: fade(@blue1,40%);
+        }
   }
+}
   .header {
     background-color: @blue2;
     border-bottom: 4px solid @blue3;
@@ -41,7 +57,7 @@
       color:white;
       font-weight: bold;
       font-size: 24px;
-      padding: 8px;
+      padding: 20px 8px 4px 4px;
 
     }
     .mobileMenu {
@@ -49,7 +65,7 @@
       cursor:pointer;
       color: white;
       font-weight:bold;
-      padding: 4px 8px 4px 8px;
+      padding: 8px 8px 4px 8px;
       float:right;
       &:hover, &:focus{
         background-color: fade(@blue1,40%);
@@ -60,6 +76,13 @@
       .navbar-link{
         visibility: visible;
         opacity:1;
+      }
+    }
+    .checkBox-hidden:checked ~ .navbar-right {
+      a{
+        visibility: visible;
+        opacity:1;
+        display:block;
       }
     }
 
