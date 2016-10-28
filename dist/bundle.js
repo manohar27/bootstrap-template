@@ -22000,6 +22000,10 @@
 	
 	var _footer2 = _interopRequireDefault(_footer);
 	
+	var _carouselJS = __webpack_require__(/*! ../carouselJS */ 186);
+	
+	var _carouselJS2 = _interopRequireDefault(_carouselJS);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22053,6 +22057,11 @@
 	      var data = this.props.data;
 	      var imageList = data.imageList;
 	      var navList = data.navList;
+	      var carousel = _react2.default.createElement(_carousel2.default, { imageList: data.carouselImages });
+	      if (typeof document !== 'undefined') {
+	        carousel = _react2.default.createElement(_carouselJS2.default, { imageList: data.carouselImages });
+	      }
+	
 	      return _react2.default.createElement(
 	        'div',
 	        null,
@@ -22060,7 +22069,12 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'grid' },
-	          _react2.default.createElement(_carousel2.default, { imageList: data.carouselImages }),
+	          _react2.default.createElement(
+	            'h2',
+	            { className: 'page-heading' },
+	            ' Easy Grocery Shopping '
+	          ),
+	          carousel,
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'row' },
@@ -22160,7 +22174,7 @@
 	
 	Header.propTypes = {
 	  logo: _react2.default.PropTypes.string.isRequired,
-	  navList: _react2.default.PropTypes.array.isRequired
+	  navList: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.string).isRequired
 	};
 	exports.default = Header;
 
@@ -22206,7 +22220,7 @@
 	};
 	
 	NavBar.propTypes = {
-	  list: _react2.default.PropTypes.array.isRequired
+	  list: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.string).isRequired
 	};
 	exports.default = NavBar;
 
@@ -22256,7 +22270,7 @@
 	  );
 	};
 	Carousel.propTypes = {
-	  imageList: _react2.default.PropTypes.array.isRequired
+	  imageList: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.string).isRequired
 	};
 	exports.default = Carousel;
 
@@ -22321,7 +22335,7 @@
 	            this.props.title
 	          )
 	        ),
-	        _react2.default.createElement("input", { type: "button", className: "fav-button", onClick: this.favorited }),
+	        _react2.default.createElement("button", { className: "fav-button", onClick: this.favorited }),
 	        _react2.default.createElement("i", { className: "heart-icon" })
 	      );
 	    }
@@ -22446,7 +22460,7 @@
 	
 	FavoriteStamp.propTypes = {
 	  removeFav: _react2.default.PropTypes.func.isRequired,
-	  items: _react2.default.PropTypes.array.isRequired
+	  items: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.string).isRequired
 	};
 	exports.default = FavoriteStamp;
 
@@ -23357,9 +23371,113 @@
 	
 	Footer.propTypes = {
 	  label: _react2.default.PropTypes.string.isRequired,
-	  items: _react2.default.PropTypes.array.isRequired
+	  items: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.string)
 	};
 	exports.default = Footer;
+
+/***/ },
+/* 186 */
+/*!********************************************!*\
+  !*** ./src/components/carouselJS/index.js ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Carousel = function (_React$Component) {
+	  _inherits(Carousel, _React$Component);
+	
+	  function Carousel(props) {
+	    _classCallCheck(this, Carousel);
+	
+	    var _this = _possibleConstructorReturn(this, (Carousel.__proto__ || Object.getPrototypeOf(Carousel)).call(this, props));
+	
+	    _this.carouselMove = _this.carouselMove.bind(_this);
+	    _this.state = { carouselIndex: 1 };
+	    return _this;
+	  }
+	
+	  _createClass(Carousel, [{
+	    key: "carouselMove",
+	    value: function carouselMove(offset) {
+	      var index = this.state.carouselIndex + offset;
+	      var len = this.props.imageList.length;
+	      index = index > len - 1 ? 0 : index;
+	      index = index < 0 ? len - 1 : index;
+	      this.setState({ carouselIndex: index });
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      var _this2 = this;
+	
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "jscarousel-wrapper" },
+	        _react2.default.createElement("button", { className: "carousel-left", onClick: function onClick() {
+	            return _this2.carouselMove(-1);
+	          } }),
+	        _react2.default.createElement(
+	          "span",
+	          { className: "carousel-label" },
+	          this.props.imageList[this.state.carouselIndex].split('.')[0]
+	        ),
+	        this.props.imageList.map(function (item, index) {
+	          return _react2.default.createElement("img", { key: index, className: _this2.state.carouselIndex === index ? 'visible' : 'hidden', src: item, alt: item });
+	        }),
+	        _react2.default.createElement("button", { className: "carousel-right", onClick: function onClick() {
+	            return _this2.carouselMove(1);
+	          } }),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "current-indicator" },
+	          this.props.imageList.map(function (item, index) {
+	            return _react2.default.createElement(
+	              "span",
+	              { key: index },
+	              _react2.default.createElement("input", {
+	                id: index,
+	                onChange: function onChange() {
+	                  return _this2.setState({ carouselIndex: index });
+	                }, checked: _this2.state.carouselIndex === index, type: "radio", name: "currentIndicator" }),
+	              _react2.default.createElement(
+	                "label",
+	                { htmlFor: index, className: "carousel-radio" },
+	                _react2.default.createElement("i", { className: "radio-icon" })
+	              )
+	            );
+	          })
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Carousel;
+	}(_react2.default.Component);
+	
+	Carousel.propTypes = {
+	  imageList: _react2.default.PropTypes.arrayOf(String).isRequired
+	};
+	
+	exports.default = Carousel;
 
 /***/ }
 /******/ ]);

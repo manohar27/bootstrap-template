@@ -40,6 +40,6 @@ class FavoriteStamp extends React.Component {
 }
 FavoriteStamp.propTypes = {
   removeFav: React.PropTypes.func.isRequired,
-  items: React.PropTypes.array.isRequired
+  items: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
 };
 export default FavoriteStamp;

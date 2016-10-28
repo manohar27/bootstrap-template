@@ -331,6 +331,173 @@ table {
   }
 }
 
+.jscarousel-wrapper {
+  position: relative;
+  height: 300px;
+  text-align: center;
+  margin-top: 12px;
+  overflow: hidden;
+  box-shadow: 0px 0px 8px 0px #666666;
+}
+.jscarousel-wrapper img {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: all 0.5s ease-in-out;
+}
+.jscarousel-wrapper .hidden {
+  opacity: 0;
+  height: 0px
+  	overflow:hidden;
+}
+.jscarousel-wrapper .visible {
+  display: inline;
+  opacity: 1;
+}
+.jscarousel-wrapper .carousel-label {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: block;
+  color: #fff;
+  z-index: 2;
+  font-size: 45px;
+  opacity: 0.75;
+  margin: 12px;
+  box-shadow: 2px 2px 15px 8px;
+  border-radius: 20px;
+  background-color: #666666;
+  padding: 8px;
+  transition: all 0.3s linear;
+}
+.jscarousel-wrapper .current-indicator {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  left: 0px;
+}
+.jscarousel-wrapper .current-indicator input[type=radio] {
+  position: absolute;
+  display: none;
+}
+.jscarousel-wrapper .current-indicator input[type=radio]:checked ~ label .radio-icon:before {
+  background: #00294f;
+  box-shadow: 0px 0px 5px 0px rgba(0, 140, 218, 0.5);
+  border: 5px solid #00294f;
+}
+.jscarousel-wrapper .current-indicator label {
+  display: inline;
+  position: relative;
+  padding: 25px 15px 10px 10px;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 10px auto;
+  height: 30px;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+.jscarousel-wrapper .current-indicator label .radio-icon:before {
+  display: inline;
+  position: absolute;
+  content: '';
+  border: 5px solid #ccc;
+  border-radius: 100%;
+  height: 10px;
+  width: 10px;
+  top: 30px;
+  background: #fff;
+  left: 10px;
+  z-index: 5;
+  transition: border .25s linear;
+  -webkit-transition: border .25s linear;
+}
+.jscarousel-wrapper .arrow {
+  position: absolute;
+  top: 0px;
+  width: 100px;
+  height: 100%;
+  cursor: pointer;
+  outline: none;
+  z-index: 1;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  background: url("../arrow.png") 50% 2.5% no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-in-out;
+}
+.jscarousel-wrapper .arrow:hover,
+.jscarousel-wrapper .arrow:focus {
+  background-image: url(arrow.png), linear-gradient(to right, #008cda, transparent);
+  outline: none;
+  border: none;
+}
+.jscarousel-wrapper .carousel-left {
+  position: absolute;
+  top: 0px;
+  width: 100px;
+  height: 100%;
+  cursor: pointer;
+  outline: none;
+  z-index: 1;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  background: url("../arrow.png") 50% 2.5% no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-in-out;
+  left: 0px;
+}
+.jscarousel-wrapper .carousel-left:hover,
+.jscarousel-wrapper .carousel-left:focus {
+  background-image: url(arrow.png), linear-gradient(to right, #008cda, transparent);
+  outline: none;
+  border: none;
+}
+.jscarousel-wrapper .carousel-right {
+  position: absolute;
+  top: 0px;
+  width: 100px;
+  height: 100%;
+  cursor: pointer;
+  outline: none;
+  z-index: 1;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  background: url("../arrow.png") 50% 2.5% no-repeat;
+  background-position: center;
+  transition: all 0.5s ease-in-out;
+  right: 0px;
+  transform: rotate(180deg);
+}
+.jscarousel-wrapper .carousel-right:hover,
+.jscarousel-wrapper .carousel-right:focus {
+  background-image: url(arrow.png), linear-gradient(to right, #008cda, transparent);
+  outline: none;
+  border: none;
+}
+@media only screen and (max-width: 560px) {
+  .jscarousel-wrapper {
+    margin: 30px 5px 5px 5px;
+    height: 280px;
+    overflow: hidden;
+  }
+  .jscarousel-wrapper .carousel-left,
+  .jscarousel-wrapper .carousel-right {
+    width: 70px;
+  }
+  .jscarousel-wrapper .carousel-label {
+    display: none;
+  }
+  .jscarousel-wrapper img {
+    width: 550px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .jscarousel-wrapper img {
+    height: 100%;
+  }
+}
 
 .favorite-stamp {
   border: 1px solid #ccc;
@@ -381,7 +548,7 @@ table {
 .favorite-stamp .favorite-list-group .favorite-list-item .close-icon {
   line-height: 20px;
   background-image: url('remove.png');
-  background-size: 20px;
+  background-size: 25px;
   background-repeat-y: no-repeat;
   background-repeat-x: no-repeat;
   background-position: center;
@@ -401,8 +568,8 @@ table {
   background-position: center;
 }
 .favorite-stamp .favorite-list-group .favorite-list-item p {
-  padding-right: 12px;
   display: inline-block;
+  width: 50%;
 }
 .favorite-stamp .my-fav-stamp {
   display: block;
@@ -549,7 +716,7 @@ table {
   .navbar {
     height: 0;
     overflow: hidden;
-    transition: height 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   .navbar .navbar-link {
     color: white;
@@ -603,16 +770,21 @@ table {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    position: absolute;
+    top: 8px;
+    padding: 0px 0px 4px 8px;
     font-size: 24px;
-    padding: 20px 8px 4px 4px;
   }
   .header .mobileMenu {
     font-size: 24px;
     cursor: pointer;
     color: white;
+    position: absolute;
+    top: 8px;
+    right: 4px;
     font-weight: bold;
-    padding: 8px 8px 4px 8px;
-    float: right;
+    padding: 0px 8px 4px 8px;
+    gitfloat: right;
   }
   .header .mobileMenu:hover,
   .header .mobileMenu:focus {
@@ -708,6 +880,11 @@ body {
   width: 75%;
   display: block;
   margin: 0 auto;
+}
+.page-heading {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
 }
 .col-1 {
   width: 8.33%;

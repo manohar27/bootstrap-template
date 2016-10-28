@@ -15,6 +15,6 @@ const Footer = props => (
 
 Footer.propTypes = {
   label: React.PropTypes.string.isRequired,
-  items: React.PropTypes.array.isRequired
+  items: React.PropTypes.arrayOf(React.PropTypes.string)
 };
 export default Footer;

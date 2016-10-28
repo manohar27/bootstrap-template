@@ -1,0 +1,11 @@
+galen check home-page.gspec
+    --url "http://localhost:3000"
+    --size "1920x1080"
+    --javascript "some.js"
+    --include "mobile,all"
+    --exclude "toexclude"
+    --htmlreport "htmlreport-dir"
+    --testngreport "testng-report.xml"
+    --jsonreport "jsonreport-dir"
+    --junitreport "junit-report.xml"
+    --config "../galen.config"

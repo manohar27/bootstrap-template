@@ -16,7 +16,7 @@ class Stamp extends React.Component {
         <img src={this.props.image} alt={this.props.image} />
         <span className="stamp-label">{this.props.title}</span>
       </a>
-      <input type="button" className="fav-button" onClick={this.favorited} />
+      <button className="fav-button" onClick={this.favorited} />
       <i className="heart-icon" />
     </div>
   );

@@ -9,6 +9,6 @@ const NavBar = props => (
     );
 
 NavBar.propTypes = {
-  list: React.PropTypes.array.isRequired
+  list: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
 };
 export default NavBar;

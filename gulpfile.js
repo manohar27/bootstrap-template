@@ -4,6 +4,7 @@ var path = require('path');
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var jasmine = require('gulp-jasmine');
+var JasmineConsoleReporter = require('jasmine-console-reporter');
 
 gulp.task('less', function () {
   return gulp.src('./src/**/*.less')
@@ -16,7 +17,15 @@ gulp.task('less', function () {
 
 gulp.task('tests', function () {
     return gulp.src('./src/**/*spec.js')
-        .pipe(jasmine());
+        .pipe(jasmine({
+      reporter: [new JasmineConsoleReporter({
+          colors: 1,           // (0|false)|(1|true)|2
+          cleanStack: 1,       // (0|false)|(1|true)|2|3
+          verbosity: 4,        // (0|false)|1|2|(3|true)|4
+          listStyle: 'indent', // "flat"|"indent"
+          activity: false
+      })]
+    }));
 });
 
 gulp.task('watch', function() {

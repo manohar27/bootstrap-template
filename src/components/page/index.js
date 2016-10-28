@@ -4,6 +4,7 @@ import Carousel from '../carousel';
 import Stamp from '../stamp';
 import FavoriteStamp from '../favorite-stamp';
 import Footer from '../footer';
+import JSCarousel from '../carouselJS';
 
 class Page extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class Page extends React.Component {
     this.state = {favorites: defaultFav};
     this.removeFav = this.removeFav.bind(this);
   }
+
 
   favoriteChanged(item) {
     const fav = this.state.favorites;
@@ -37,11 +39,17 @@ class Page extends React.Component {
     const data = this.props.data;
     const imageList = data.imageList;
     const navList = data.navList;
+    let carousel = <Carousel imageList={data.carouselImages} />;
+    if (typeof document !== 'undefined') {
+      carousel = <JSCarousel imageList={data.carouselImages} />;
+    }
+
   return (
     <div >
       <Header logo={data.logo} navList={navList} />
       <div className="grid">
-        <Carousel imageList={data.carouselImages} />
+      <h2 className="page-heading"> Easy Grocery Shopping </h2>
+        {carousel}
         <div className="row">
           {imageList.map((item, index) => <Stamp favoriteChanged={this.favoriteChanged} key={index} image={item.image} title={item.title} />)}
           <div className="col-6" >

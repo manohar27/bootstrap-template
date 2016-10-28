@@ -57,6 +57,6 @@ let data = {
     "favList": ['Dairy','Cosmetics'],
     "logo": "Logo!",
     "copyright": "Copyright @jz21",
-    "carouselImages": ['Household.jpg','Coffee.jpg','Beverages.jpg']
+    "carouselImages": ['Household.jpg','Coffee.jpg','Beverages.jpg','Fruits.jpg','dairy.jpg','pasta.jpg']
   };
 export default data;

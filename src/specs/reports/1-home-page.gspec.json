@@ -1,0 +1,173 @@
+{
+  "testId" : "1-home-page.gspec",
+  "name" : "home-page.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  home-page.gspec --url http://localhost:3000 --size 1024x768 --htmlreport reports -Dwebdriver.chrome.driver=/usr/lib/node_modules/galenframework-cli/node_modules/chromedriver/lib/chromedriver/chromedriver",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: home-page.gspec included tags: ",
+          "status" : "info",
+          "time" : 1477570988369,
+          "sections" : [ {
+            "name" : "Header",
+            "place" : {
+              "filePath" : "home-page.gspec",
+              "lineNumber" : 11
+            },
+            "objects" : [ {
+              "name" : "header",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "home-page.gspec",
+                  "lineNumber" : 13
+                },
+                "name" : "width 100% of screen/width",
+                "highlight" : [ "header" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "home-page.gspec",
+                  "lineNumber" : 14
+                },
+                "name" : "height 50px",
+                "highlight" : [ "header" ]
+              } ]
+            }, {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "home-page.gspec",
+                  "lineNumber" : 16
+                },
+                "name" : "inside header",
+                "highlight" : [ "logo", "header" ]
+              } ]
+            }, {
+              "name" : "navbar",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "home-page.gspec",
+                  "lineNumber" : 18
+                },
+                "name" : "inside header",
+                "highlight" : [ "navbar", "header" ]
+              } ]
+            }, {
+              "name" : "login-button",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "home-page.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "inside header 4px top right",
+                "highlight" : [ "login-button", "header" ]
+              } ]
+            } ]
+          }, {
+            "name" : "Body",
+            "place" : {
+              "filePath" : "home-page.gspec",
+              "lineNumber" : 22
+            },
+            "objects" : [ {
+              "name" : "grid",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "home-page.gspec",
+                  "lineNumber" : 24
+                },
+                "name" : "width ~ 75% of screen/width",
+                "highlight" : [ "grid" ]
+              } ]
+            }, {
+              "name" : "carousel",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "home-page.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "inside grid",
+                "highlight" : [ "carousel", "grid" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "home-page.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "width 100% of grid/width",
+                "highlight" : [ "carousel" ]
+              } ]
+            }, {
+              "name" : "fav-stamp-remove-button-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "home-page.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "right-of fav-stamp",
+                "highlight" : [ "fav-stamp-remove-button-1", "fav-stamp" ]
+              } ]
+            }, {
+              "name" : "fav-stamp-remove-button-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "home-page.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "right-of fav-stamp",
+                "highlight" : [ "fav-stamp-remove-button-2", "fav-stamp" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "navbar" : {
+              "area" : [ 239, 0, 321, 50 ]
+            },
+            "login-button" : {
+              "area" : [ 941, 4, 66, 40 ]
+            },
+            "grid" : {
+              "area" : [ 126, 62, 758, 1116 ]
+            },
+            "header" : {
+              "area" : [ 0, 0, 1011, 50 ]
+            },
+            "logo" : {
+              "area" : [ 0, 0, 205, 48 ]
+            },
+            "fav-stamp-remove-button-1" : {
+              "area" : [ 656, 747, 35, 35 ]
+            },
+            "fav-stamp" : {
+              "area" : [ 525, 747, 88, 32 ]
+            },
+            "carousel" : {
+              "area" : [ 126, 62, 758, 400 ]
+            },
+            "fav-stamp-remove-button-2" : {
+              "area" : [ 656, 827, 35, 35 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1477570985109,
+        "type" : "node"
+      } ],
+      "time" : 1477570980774,
+      "type" : "node"
+    } ]
+  }
+}

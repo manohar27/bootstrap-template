@@ -1,0 +1,29 @@
+@objects
+	header	css	.header
+	logo .logo
+	navbar .navbar
+	login-button .login-button
+	carousel .jscarousel-wrapper
+	grid .grid
+	fav-stamp .favorite-list-group span li p
+	fav-stamp-remove-button-* .favorite-list-group span li button
+
+= Header =
+	header:
+		width 100% of screen/width
+		height 50px
+	logo:
+		inside header
+	navbar:
+		inside header
+	login-button:
+		inside header 4px top right
+
+= Body =
+	grid: 
+		width ~ 75% of screen/width
+	carousel:
+		inside grid
+		width 100% of grid/width
+	fav-stamp-remove-button-*:
+		right-of fav-stamp

@@ -18,6 +18,6 @@ const Header = props => (
 
 Header.propTypes = {
   logo: React.PropTypes.string.isRequired,
-  navList: React.PropTypes.array.isRequired
+  navList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
 };
 export default Header;

@@ -1,0 +1,17 @@
+{
+  "tests" : [ {
+    "name" : "home-page.gspec",
+    "startedAt" : 1477570980770,
+    "endedAt" : 1477570988498,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 10,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 10
+    },
+    "testId" : "1-home-page.gspec",
+    "failed" : false,
+    "duration" : 7728
+  } ]
+}

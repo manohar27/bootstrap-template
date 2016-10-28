@@ -1,0 +1,141 @@
+@import '../colors.less';
+
+.jscarousel-wrapper {
+  position: relative;
+  height: 300px;
+  text-align: center;
+  margin-top: 12px;
+  overflow:hidden;
+  box-shadow: 0px 0px 8px 0px @grey2;
+  img{
+  	width:100%;
+  	position:absolute;
+  	top:0px;
+  	left:0px;
+  	transition: all .5s ease-in-out;
+  }
+  .hidden{
+  	opacity:0;
+  	height:0px
+  	overflow:hidden;
+  }
+  .visible{
+  	display:inline;
+  	opacity:1;
+  }
+	.carousel-label{
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		display: block;
+		color: @white;
+    z-index:2;
+		font-size: 45px;
+		opacity: 0.75;
+		margin: 12px;
+		box-shadow: 2px 2px 15px 8px;
+		border-radius: 20px;
+		background-color: @grey2;
+		padding: 8px;
+    transition: all 0.3s linear;
+	}
+	.current-indicator{
+		position: absolute;
+	    bottom: 25px;
+	    width: 100%;
+	    left: 0px;
+	    input[type=radio]{
+		  position: absolute;
+      display: none;
+      &:checked ~ label .radio-icon:before{
+        background: @blue2;
+        box-shadow: 0px 0px 5px 0px fade(@blue1,50%);
+        border: 5px solid @blue2;
+      }
+		}
+		label{
+		  display: inline;
+		  position: relative;
+      padding:25px 15px 10px 10px;
+		  font-weight: 300;
+		  font-size: 16px;
+		  margin: 10px auto;
+		  height: 30px;
+		  cursor: pointer;
+		  -webkit-transition: all 0.25s linear;
+				.radio-icon{
+          &:before{
+    	display: inline;
+    	position: absolute;
+      content:'';
+    	border: 5px solid @grey1;
+    	border-radius: 100%;
+    	height: 10px;
+    	width: 10px;
+    	top: 30px;
+      background:@white;
+      left: 10px;
+    	z-index: 5;
+    	transition: border .25s linear;
+    	-webkit-transition: border .25s linear;
+		}
+
+}
+}
+}
+	.arrow{
+		  position: absolute;
+		  top: 0px;
+		  width: 100px;
+		  height: 100%;
+		  cursor:pointer;
+		  outline:none;
+		  z-index:1;
+		  border:none;
+		  -webkit-tap-highlight-color: transparent;
+		  background: url("../arrow.png") 50% 50%/20px no-repeat;
+		  background-position: center;
+		  transition: all 0.5s ease-in-out;
+		  &:hover,&:focus{
+		    background-image: url(arrow.png), linear-gradient(to right,#008cda,transparent);
+		    outline:none;
+		    border:none;
+		  }
+	}
+	.carousel-left{
+		.arrow;
+   		  left: 0px;
+
+	}
+	.carousel-right{
+		.arrow;
+		right:0px;
+		transform: rotate(180deg);
+	}
+}
+
+@media only screen and (max-width:560px){
+	.jscarousel-wrapper{
+		margin:30px 5px 5px 5px;
+    height:280px;
+  	.carousel-left, .carousel-right{
+  		width:70px;
+  	}
+    .carousel-label{
+      display:none;
+    }
+    overflow:hidden;
+    	img{
+	    	width:550px;
+	        height:300px;
+    	}
+	}
+}
+
+@media only screen and (max-width:1000px){
+  .jscarousel-wrapper{
+    img{
+      height:100%;
+    }
+  }
+}

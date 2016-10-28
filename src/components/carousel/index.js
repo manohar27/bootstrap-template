@@ -18,6 +18,6 @@ const Carousel = props => (
   </div>
     );
 Carousel.propTypes = {
-  imageList: React.PropTypes.array.isRequired
+  imageList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
 };
 export default Carousel;
