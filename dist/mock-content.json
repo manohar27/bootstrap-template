@@ -11,7 +11,7 @@
       "image": "fruits.jpg"
     },
     {
-      "title": "Dairy",
+      "title": "Milk",
       "image": "dairy.jpg"
     },
     {
@@ -23,11 +23,11 @@
       "image": "pasta.jpg"
     },
     {
-      "title": "Dairy",
+      "title": "Cheese",
       "image": "dairy.jpg"
     },
     {
-      "title": "Dairy",
+      "title": "Yoghurt",
       "image": "dairy.jpg"
     }
   ],
@@ -58,6 +58,7 @@
     "Cosmetics"
   ],
   "logo": "BOOMBasket!",
+  "heading": "Easy Grocery Shipping",
   "copyright": "Copyright @jz21",
   "carouselImages": [
     "Household.jpg",

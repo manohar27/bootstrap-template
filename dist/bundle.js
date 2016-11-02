@@ -22072,7 +22072,7 @@
 	          _react2.default.createElement(
 	            'h2',
 	            { className: 'page-heading' },
-	            ' Easy Grocery Shopping '
+	            data.heading
 	          ),
 	          carousel,
 	          _react2.default.createElement(

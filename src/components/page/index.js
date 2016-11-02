@@ -48,7 +48,7 @@ class Page extends React.Component {
     <div >
       <Header logo={data.logo} navList={navList} />
       <div className="grid">
-      <h2 className="page-heading"> Easy Grocery Shopping </h2>
+      <h2 className="page-heading">{data.heading}</h2>
         {carousel}
         <div className="row">
           {imageList.map((item, index) => <Stamp favoriteChanged={this.favoriteChanged} key={index} image={item.image} title={item.title} />)}
