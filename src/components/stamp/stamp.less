@@ -7,22 +7,6 @@
   position:relative;
   color:white;
 
-  .fav-button{
-    position:absolute;
-    bottom:20px;
-    right:20px;
-    color:@white;
-    height:35px;
-    width:35px;
-    border:none;
-    cursor:pointer;
-    background-image: url(./heart.png);
-    background-color:transparent;
-    transition:background-image .3s ease-in-out;
-    &:hover,&:focus{
-      background-image:url(./heart-colored.png);
-    }
-  }
   .stamp-link{ 
     display:inline-block;
     position:relative;
@@ -52,9 +36,8 @@
     color: @white;
     line-height:52px;
     font-size: 16px;
-    font-family: sans-serif;
     font-weight: bold;
-    transition: background .3s ease-in-out;
+    transition: all .3s ease-in-out;
     transition-delay: 0.2s;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;

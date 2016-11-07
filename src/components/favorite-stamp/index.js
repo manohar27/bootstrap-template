@@ -5,15 +5,16 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class FavoriteStamp extends React.Component {
   constructor(props) {
     super(props);
-    this.removeFav = this.removeFav.bind(this);
+    this.unfavorite = this.unfavorite.bind(this);
   }
 
-  removeFav(name) {
-    this.props.removeFav(name);
+  unfavorite(name) {
+    this.props.unfavorite(name);
   }
+
   render() {
     let noFav = '';
-    if (this.props.items.length === 0) {
+    if (this.props.favoriteItems.length === 0) {
       noFav = (<span className="no-fav">You have no favorites</span>);
     }
     return (
@@ -23,9 +24,9 @@ class FavoriteStamp extends React.Component {
             transitionName="example"
             transitionEnterTimeout={500}
             transitionLeaveTimeout={300}>
-            {this.props.items.map((item, index) => <li key={index} className="favorite-list-item">
+            {this.props.favoriteItems.map((item, index) => <li key={index} className="favorite-list-item">
               <p>{item}</p>
-              <button onClick={() => this.removeFav(item)} className="close-icon" />
+              <button onClick={() => this.unfavorite(item)} className="close-icon" />
             </li>)}
           </ReactCSSTransitionGroup>
         </ul>
@@ -35,11 +36,13 @@ class FavoriteStamp extends React.Component {
           <img src="fav.png" className="fav-image" alt="Heart Icon" />
         </div>
       </div>
-);
+  );
+  }
 }
-}
+
 FavoriteStamp.propTypes = {
-  removeFav: React.PropTypes.func.isRequired,
-  items: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+  unfavorite: React.PropTypes.func.isRequired,
+  favoriteItems: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
 };
+
 export default FavoriteStamp;

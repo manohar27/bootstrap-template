@@ -9,7 +9,6 @@ const Footer = props => (
     <ul className="footer-link-group">
       {props.items.map((item, index) => <li className="link" key={index}><a href={item.replace(/\s+/g, '')}>{item}</a></li>)}
     </ul>
-
   </div>
 );
 

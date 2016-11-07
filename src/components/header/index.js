@@ -14,7 +14,7 @@ const Header = props => (
       </a>
     </span>
   </div>
-      );
+);
 
 Header.propTypes = {
   logo: React.PropTypes.string.isRequired,

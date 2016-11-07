@@ -24,11 +24,11 @@
     },
     {
       "title": "Cheese",
-      "image": "dairy.jpg"
+      "image": "cheese.jpg"
     },
     {
       "title": "Yoghurt",
-      "image": "dairy.jpg"
+      "image": "yoghurt.jpg"
     }
   ],
   "footer": [
@@ -58,11 +58,16 @@
     "Cosmetics"
   ],
   "logo": "BOOMBasket!",
-  "heading": "Easy Grocery Shipping",
+  "heading": "Easy Grocery Shopping",
   "copyright": "Copyright @jz21",
   "carouselImages": [
     "Household.jpg",
     "Coffee.jpg",
     "Beverages.jpg"
+  ],
+  "carouselLabels": [
+    "Grab 10% discount on all Household products",
+    "Hmmmm.. Coffee..",
+    "Buy one get one! on beverages"
   ]
 }

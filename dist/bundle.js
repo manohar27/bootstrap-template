@@ -21988,19 +21988,19 @@
 	
 	var _carousel2 = _interopRequireDefault(_carousel);
 	
-	var _stamp = __webpack_require__(/*! ../stamp */ 176);
+	var _favoritableStamp = __webpack_require__(/*! ../favoritableStamp */ 176);
 	
-	var _stamp2 = _interopRequireDefault(_stamp);
+	var _favoritableStamp2 = _interopRequireDefault(_favoritableStamp);
 	
-	var _favoriteStamp = __webpack_require__(/*! ../favorite-stamp */ 177);
+	var _favoriteStamp = __webpack_require__(/*! ../favorite-stamp */ 179);
 	
 	var _favoriteStamp2 = _interopRequireDefault(_favoriteStamp);
 	
-	var _footer = __webpack_require__(/*! ../footer */ 185);
+	var _footer = __webpack_require__(/*! ../footer */ 187);
 	
 	var _footer2 = _interopRequireDefault(_footer);
 	
-	var _carouselJS = __webpack_require__(/*! ../carouselJS */ 186);
+	var _carouselJS = __webpack_require__(/*! ../carouselJS */ 188);
 	
 	var _carouselJS2 = _interopRequireDefault(_carouselJS);
 	
@@ -22023,7 +22023,7 @@
 	    _this.favoriteChanged = _this.favoriteChanged.bind(_this);
 	    var defaultFav = _this.props.data.favList;
 	    _this.state = { favorites: defaultFav };
-	    _this.removeFav = _this.removeFav.bind(_this);
+	    _this.unfavorite = _this.unfavorite.bind(_this);
 	    return _this;
 	  }
 	
@@ -22042,8 +22042,8 @@
 	      }
 	    }
 	  }, {
-	    key: 'removeFav',
-	    value: function removeFav(name) {
+	    key: 'unfavorite',
+	    value: function unfavorite(name) {
 	      var fav = this.state.favorites;
 	      var pos = fav.indexOf(name);
 	      fav.splice(pos, 1);
@@ -22059,7 +22059,7 @@
 	      var navList = data.navList;
 	      var carousel = _react2.default.createElement(_carousel2.default, { imageList: data.carouselImages });
 	      if (typeof document !== 'undefined') {
-	        carousel = _react2.default.createElement(_carouselJS2.default, { imageList: data.carouselImages });
+	        carousel = _react2.default.createElement(_carouselJS2.default, { imageSrcList: data.carouselImages, labelList: data.carouselLabels });
 	      }
 	
 	      return _react2.default.createElement(
@@ -22079,12 +22079,12 @@
 	            'div',
 	            { className: 'row' },
 	            imageList.map(function (item, index) {
-	              return _react2.default.createElement(_stamp2.default, { favoriteChanged: _this2.favoriteChanged, key: index, image: item.image, title: item.title });
+	              return _react2.default.createElement(_favoritableStamp2.default, { favoriteChanged: _this2.favoriteChanged, key: index, imageSrc: item.image, title: item.title });
 	            }),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'col-6' },
-	              _react2.default.createElement(_favoriteStamp2.default, { items: this.state.favorites, removeFav: this.removeFav })
+	              _react2.default.createElement(_favoriteStamp2.default, { favoriteItems: this.state.favorites, unfavorite: this.unfavorite })
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -22276,12 +22276,12 @@
 
 /***/ },
 /* 176 */
-/*!***************************************!*\
-  !*** ./src/components/stamp/index.js ***!
-  \***************************************/
+/*!**************************************************!*\
+  !*** ./src/components/favoritableStamp/index.js ***!
+  \**************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -22293,6 +22293,14 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _stamp = __webpack_require__(/*! ../stamp */ 177);
+	
+	var _stamp2 = _interopRequireDefault(_stamp);
+	
+	var _favoriteButton = __webpack_require__(/*! ../favoriteButton */ 178);
+	
+	var _favoriteButton2 = _interopRequireDefault(_favoriteButton);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22301,58 +22309,124 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Stamp = function (_React$Component) {
-	  _inherits(Stamp, _React$Component);
+	var FavoritableStamp = function (_React$Component) {
+	  _inherits(FavoritableStamp, _React$Component);
 	
-	  function Stamp(props) {
-	    _classCallCheck(this, Stamp);
+	  function FavoritableStamp(props) {
+	    _classCallCheck(this, FavoritableStamp);
 	
-	    var _this = _possibleConstructorReturn(this, (Stamp.__proto__ || Object.getPrototypeOf(Stamp)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (FavoritableStamp.__proto__ || Object.getPrototypeOf(FavoritableStamp)).call(this, props));
 	
-	    _this.favorited = _this.favorited.bind(_this);
+	    _this.favoriteClicked = _this.favoriteClicked.bind(_this);
 	    return _this;
 	  }
 	
-	  _createClass(Stamp, [{
-	    key: "favorited",
-	    value: function favorited() {
+	  _createClass(FavoritableStamp, [{
+	    key: 'favoriteClicked',
+	    value: function favoriteClicked() {
 	      this.props.favoriteChanged(this.props.title);
 	    }
 	  }, {
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
-	
 	      return _react2.default.createElement(
-	        "div",
-	        { className: "col-3 stamp" },
+	        'div',
+	        null,
 	        _react2.default.createElement(
-	          "a",
-	          { href: "/", className: "stamp-link" },
-	          _react2.default.createElement("img", { src: this.props.image, alt: this.props.image }),
-	          _react2.default.createElement(
-	            "span",
-	            { className: "stamp-label" },
-	            this.props.title
-	          )
-	        ),
-	        _react2.default.createElement("button", { className: "fav-button", onClick: this.favorited }),
-	        _react2.default.createElement("i", { className: "heart-icon" })
+	          _stamp2.default,
+	          { title: this.props.title, imageSrc: this.props.imageSrc },
+	          _react2.default.createElement(_favoriteButton2.default, { onClick: this.favoriteClicked })
+	        )
 	      );
 	    }
 	  }]);
 	
-	  return Stamp;
+	  return FavoritableStamp;
 	}(_react2.default.Component);
 	
-	Stamp.propTypes = {
+	FavoritableStamp.propTypes = {
 	  title: _react2.default.PropTypes.string.isRequired,
-	  image: _react2.default.PropTypes.string.isRequired,
-	  favoriteChanged: _react2.default.PropTypes.func.isRequired
+	  imageSrc: _react2.default.PropTypes.string.isRequired,
+	  favoriteChanged: _react2.default.PropTypes.func
 	};
-	exports.default = Stamp;
+	
+	exports.default = FavoritableStamp;
 
 /***/ },
 /* 177 */
+/*!***************************************!*\
+  !*** ./src/components/stamp/index.js ***!
+  \***************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Stamp = function Stamp(props) {
+	  return _react2.default.createElement(
+	    "div",
+	    { className: "col-3 stamp" },
+	    _react2.default.createElement(
+	      "a",
+	      { href: "/", className: "stamp-link" },
+	      _react2.default.createElement("img", { src: props.imageSrc, alt: props.imageSrc }),
+	      _react2.default.createElement(
+	        "span",
+	        { className: "stamp-label" },
+	        props.title
+	      )
+	    ),
+	    props.children
+	  );
+	};
+	
+	Stamp.propTypes = {
+	  title: _react2.default.PropTypes.string.isRequired,
+	  imageSrc: _react2.default.PropTypes.string.isRequired,
+	  children: _react2.default.PropTypes.object
+	};
+	
+	exports.default = Stamp;
+
+/***/ },
+/* 178 */
+/*!************************************************!*\
+  !*** ./src/components/favoriteButton/index.js ***!
+  \************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var FavoriteButton = function FavoriteButton(props) {
+	  return _react2.default.createElement("button", { className: "fav-button", onClick: props.onClick });
+	};
+	
+	FavoriteButton.propTypes = {
+	  onClick: _react2.default.PropTypes.func.isRequired
+	};
+	exports.default = FavoriteButton;
+
+/***/ },
+/* 179 */
 /*!************************************************!*\
   !*** ./src/components/favorite-stamp/index.js ***!
   \************************************************/
@@ -22370,7 +22444,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactAddonsCssTransitionGroup = __webpack_require__(/*! react-addons-css-transition-group */ 178);
+	var _reactAddonsCssTransitionGroup = __webpack_require__(/*! react-addons-css-transition-group */ 180);
 	
 	var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
 	
@@ -22390,14 +22464,14 @@
 	
 	    var _this = _possibleConstructorReturn(this, (FavoriteStamp.__proto__ || Object.getPrototypeOf(FavoriteStamp)).call(this, props));
 	
-	    _this.removeFav = _this.removeFav.bind(_this);
+	    _this.unfavorite = _this.unfavorite.bind(_this);
 	    return _this;
 	  }
 	
 	  _createClass(FavoriteStamp, [{
-	    key: 'removeFav',
-	    value: function removeFav(name) {
-	      this.props.removeFav(name);
+	    key: 'unfavorite',
+	    value: function unfavorite(name) {
+	      this.props.unfavorite(name);
 	    }
 	  }, {
 	    key: 'render',
@@ -22405,7 +22479,7 @@
 	      var _this2 = this;
 	
 	      var noFav = '';
-	      if (this.props.items.length === 0) {
+	      if (this.props.favoriteItems.length === 0) {
 	        noFav = _react2.default.createElement(
 	          'span',
 	          { className: 'no-fav' },
@@ -22424,7 +22498,7 @@
 	              transitionName: 'example',
 	              transitionEnterTimeout: 500,
 	              transitionLeaveTimeout: 300 },
-	            this.props.items.map(function (item, index) {
+	            this.props.favoriteItems.map(function (item, index) {
 	              return _react2.default.createElement(
 	                'li',
 	                { key: index, className: 'favorite-list-item' },
@@ -22434,7 +22508,7 @@
 	                  item
 	                ),
 	                _react2.default.createElement('button', { onClick: function onClick() {
-	                    return _this2.removeFav(item);
+	                    return _this2.unfavorite(item);
 	                  }, className: 'close-icon' })
 	              );
 	            })
@@ -22459,22 +22533,23 @@
 	}(_react2.default.Component);
 	
 	FavoriteStamp.propTypes = {
-	  removeFav: _react2.default.PropTypes.func.isRequired,
-	  items: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.string).isRequired
+	  unfavorite: _react2.default.PropTypes.func.isRequired,
+	  favoriteItems: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.string).isRequired
 	};
+	
 	exports.default = FavoriteStamp;
 
 /***/ },
-/* 178 */
+/* 180 */
 /*!******************************************************!*\
   !*** ./~/react-addons-css-transition-group/index.js ***!
   \******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(/*! react/lib/ReactCSSTransitionGroup */ 179);
+	module.exports = __webpack_require__(/*! react/lib/ReactCSSTransitionGroup */ 181);
 
 /***/ },
-/* 179 */
+/* 181 */
 /*!************************************************!*\
   !*** ./~/react/lib/ReactCSSTransitionGroup.js ***!
   \************************************************/
@@ -22497,8 +22572,8 @@
 	
 	var React = __webpack_require__(/*! ./React */ 2);
 	
-	var ReactTransitionGroup = __webpack_require__(/*! ./ReactTransitionGroup */ 180);
-	var ReactCSSTransitionGroupChild = __webpack_require__(/*! ./ReactCSSTransitionGroupChild */ 182);
+	var ReactTransitionGroup = __webpack_require__(/*! ./ReactTransitionGroup */ 182);
+	var ReactCSSTransitionGroupChild = __webpack_require__(/*! ./ReactCSSTransitionGroupChild */ 184);
 	
 	function createTransitionTimeoutPropValidator(transitionType) {
 	  var timeoutPropName = 'transition' + transitionType + 'Timeout';
@@ -22569,7 +22644,7 @@
 	module.exports = ReactCSSTransitionGroup;
 
 /***/ },
-/* 180 */
+/* 182 */
 /*!*********************************************!*\
   !*** ./~/react/lib/ReactTransitionGroup.js ***!
   \*********************************************/
@@ -22592,7 +22667,7 @@
 	
 	var React = __webpack_require__(/*! ./React */ 2);
 	var ReactInstanceMap = __webpack_require__(/*! ./ReactInstanceMap */ 119);
-	var ReactTransitionChildMapping = __webpack_require__(/*! ./ReactTransitionChildMapping */ 181);
+	var ReactTransitionChildMapping = __webpack_require__(/*! ./ReactTransitionChildMapping */ 183);
 	
 	var emptyFunction = __webpack_require__(/*! fbjs/lib/emptyFunction */ 12);
 	
@@ -22824,7 +22899,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
-/* 181 */
+/* 183 */
 /*!****************************************************!*\
   !*** ./~/react/lib/ReactTransitionChildMapping.js ***!
   \****************************************************/
@@ -22936,7 +23011,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
-/* 182 */
+/* 184 */
 /*!*****************************************************!*\
   !*** ./~/react/lib/ReactCSSTransitionGroupChild.js ***!
   \*****************************************************/
@@ -22958,8 +23033,8 @@
 	var React = __webpack_require__(/*! ./React */ 2);
 	var ReactDOM = __webpack_require__(/*! ./ReactDOM */ 35);
 	
-	var CSSCore = __webpack_require__(/*! fbjs/lib/CSSCore */ 183);
-	var ReactTransitionEvents = __webpack_require__(/*! ./ReactTransitionEvents */ 184);
+	var CSSCore = __webpack_require__(/*! fbjs/lib/CSSCore */ 185);
+	var ReactTransitionEvents = __webpack_require__(/*! ./ReactTransitionEvents */ 186);
 	
 	var onlyChild = __webpack_require__(/*! ./onlyChild */ 33);
 	
@@ -23111,7 +23186,7 @@
 	module.exports = ReactCSSTransitionGroupChild;
 
 /***/ },
-/* 183 */
+/* 185 */
 /*!***************************************!*\
   !*** ./~/react/~/fbjs/lib/CSSCore.js ***!
   \***************************************/
@@ -23241,7 +23316,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
 
 /***/ },
-/* 184 */
+/* 186 */
 /*!**********************************************!*\
   !*** ./~/react/lib/ReactTransitionEvents.js ***!
   \**********************************************/
@@ -23322,7 +23397,7 @@
 	module.exports = ReactTransitionEvents;
 
 /***/ },
-/* 185 */
+/* 187 */
 /*!****************************************!*\
   !*** ./src/components/footer/index.js ***!
   \****************************************/
@@ -23376,7 +23451,7 @@
 	exports.default = Footer;
 
 /***/ },
-/* 186 */
+/* 188 */
 /*!********************************************!*\
   !*** ./src/components/carouselJS/index.js ***!
   \********************************************/
@@ -23410,16 +23485,16 @@
 	
 	    var _this = _possibleConstructorReturn(this, (Carousel.__proto__ || Object.getPrototypeOf(Carousel)).call(this, props));
 	
-	    _this.carouselMove = _this.carouselMove.bind(_this);
+	    _this.moveCarousel = _this.moveCarousel.bind(_this);
 	    _this.state = { carouselIndex: 1 };
 	    return _this;
 	  }
 	
 	  _createClass(Carousel, [{
-	    key: "carouselMove",
-	    value: function carouselMove(offset) {
+	    key: "moveCarousel",
+	    value: function moveCarousel(offset) {
 	      var index = this.state.carouselIndex + offset;
-	      var len = this.props.imageList.length;
+	      var len = this.props.imageSrcList.length;
 	      index = index > len - 1 ? 0 : index;
 	      index = index < 0 ? len - 1 : index;
 	      this.setState({ carouselIndex: index });
@@ -23433,23 +23508,23 @@
 	        "div",
 	        { className: "jscarousel-wrapper" },
 	        _react2.default.createElement("button", { className: "carousel-left", onClick: function onClick() {
-	            return _this2.carouselMove(-1);
+	            return _this2.moveCarousel(-1);
 	          } }),
 	        _react2.default.createElement(
 	          "span",
 	          { className: "carousel-label" },
-	          this.props.imageList[this.state.carouselIndex].split('.')[0]
+	          this.props.labelList[this.state.carouselIndex]
 	        ),
-	        this.props.imageList.map(function (item, index) {
+	        this.props.imageSrcList.map(function (item, index) {
 	          return _react2.default.createElement("img", { key: index, className: _this2.state.carouselIndex === index ? 'visible' : 'hidden', src: item, alt: item });
 	        }),
 	        _react2.default.createElement("button", { className: "carousel-right", onClick: function onClick() {
-	            return _this2.carouselMove(1);
+	            return _this2.moveCarousel(1);
 	          } }),
 	        _react2.default.createElement(
 	          "div",
 	          { className: "current-indicator" },
-	          this.props.imageList.map(function (item, index) {
+	          this.props.imageSrcList.map(function (item, index) {
 	            return _react2.default.createElement(
 	              "span",
 	              { key: index },
@@ -23474,7 +23549,8 @@
 	}(_react2.default.Component);
 	
 	Carousel.propTypes = {
-	  imageList: _react2.default.PropTypes.arrayOf(String).isRequired
+	  imageSrcList: _react2.default.PropTypes.arrayOf(String).isRequired,
+	  labelList: _react2.default.PropTypes.arrayOf(String)
 	};
 	
 	exports.default = Carousel;
