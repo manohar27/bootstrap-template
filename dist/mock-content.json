@@ -12,7 +12,7 @@
     },
     {
       "title": "Milk",
-      "image": "dairy.jpg"
+      "image": "milk.jpg"
     },
     {
       "title": "Cosmetics",
@@ -54,7 +54,7 @@
     }
   ],
   "favList": [
-    "Dairy",
+    "Milk",
     "Cosmetics"
   ],
   "logo": "BOOMBasket!",

@@ -24,10 +24,14 @@ class FavoriteStamp extends React.Component {
             transitionName="example"
             transitionEnterTimeout={500}
             transitionLeaveTimeout={300}>
-            {this.props.favoriteItems.map((item, index) => <li key={index} className="favorite-list-item">
-              <p>{item}</p>
-              <button onClick={() => this.unfavorite(item)} className="close-icon" />
-            </li>)}
+            {this.props.favoriteItems.map((item, index) => {
+              const style = { backgroundImage: `url(./${item.toLowerCase()}.jpg)`};
+              return (
+                <li key={index} className="favorite-list-item" style={style}>
+                  <p>{item}</p>
+                  <button onClick={() => this.unfavorite(item)} className="close-icon" />
+                </li>);
+            })}
           </ReactCSSTransitionGroup>
         </ul>
         {noFav}

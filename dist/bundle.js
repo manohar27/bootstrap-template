@@ -21992,6 +21992,10 @@
 	
 	var _favoritableStamp2 = _interopRequireDefault(_favoritableStamp);
 	
+	var _stamp = __webpack_require__(/*! ../stamp */ 177);
+	
+	var _stamp2 = _interopRequireDefault(_stamp);
+	
 	var _favoriteStamp = __webpack_require__(/*! ../favorite-stamp */ 179);
 	
 	var _favoriteStamp2 = _interopRequireDefault(_favoriteStamp);
@@ -22057,9 +22061,15 @@
 	      var data = this.props.data;
 	      var imageList = data.imageList;
 	      var navList = data.navList;
+	      var favoriteStamp = void 0;
 	      var carousel = _react2.default.createElement(_carousel2.default, { imageList: data.carouselImages });
 	      if (typeof document !== 'undefined') {
 	        carousel = _react2.default.createElement(_carouselJS2.default, { imageSrcList: data.carouselImages, labelList: data.carouselLabels });
+	        favoriteStamp = _react2.default.createElement(
+	          'div',
+	          { className: 'col-6' },
+	          _react2.default.createElement(_favoriteStamp2.default, { favoriteItems: this.state.favorites, unfavorite: this.unfavorite })
+	        );
 	      }
 	
 	      return _react2.default.createElement(
@@ -22079,13 +22089,12 @@
 	            'div',
 	            { className: 'row' },
 	            imageList.map(function (item, index) {
-	              return _react2.default.createElement(_favoritableStamp2.default, { favoriteChanged: _this2.favoriteChanged, key: index, imageSrc: item.image, title: item.title });
+	              if (typeof document !== 'undefined') {
+	                return _react2.default.createElement(_favoritableStamp2.default, { favoriteChanged: _this2.favoriteChanged, key: index, imageSrc: item.image, title: item.title });
+	              }
+	              return _react2.default.createElement(_stamp2.default, { key: index, imageSrc: item.image, title: item.title });
 	            }),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-6' },
-	              _react2.default.createElement(_favoriteStamp2.default, { favoriteItems: this.state.favorites, unfavorite: this.unfavorite })
-	            )
+	            favoriteStamp
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -22499,9 +22508,10 @@
 	              transitionEnterTimeout: 500,
 	              transitionLeaveTimeout: 300 },
 	            this.props.favoriteItems.map(function (item, index) {
+	              var style = { backgroundImage: 'url(./' + item.toLowerCase() + '.jpg)' };
 	              return _react2.default.createElement(
 	                'li',
-	                { key: index, className: 'favorite-list-item' },
+	                { key: index, className: 'favorite-list-item', style: style },
 	                _react2.default.createElement(
 	                  'p',
 	                  null,

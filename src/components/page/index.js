@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../header';
 import Carousel from '../carousel';
 import FavoritableStamp from '../favoritableStamp';
+import Stamp from '../stamp';
 import FavoriteStamp from '../favorite-stamp';
 import Footer from '../footer';
 import JSCarousel from '../carouselJS';
@@ -39,9 +40,13 @@ class Page extends React.Component {
     const data = this.props.data;
     const imageList = data.imageList;
     const navList = data.navList;
+    let favoriteStamp;
     let carousel = <Carousel imageList={data.carouselImages} />;
     if (typeof document !== 'undefined') {
       carousel = <JSCarousel imageSrcList={data.carouselImages} labelList={data.carouselLabels} />;
+      favoriteStamp = (<div className="col-6" >
+        <FavoriteStamp favoriteItems={this.state.favorites} unfavorite={this.unfavorite} />
+      </div>);
     }
 
   return (
@@ -51,11 +56,14 @@ class Page extends React.Component {
         <h2 className="page-heading">{data.heading}</h2>
         {carousel}
         <div className="row">
-          {imageList.map((item, index) =>
-            <FavoritableStamp favoriteChanged={this.favoriteChanged} key={index} imageSrc={item.image} title={item.title} />)}
-          <div className="col-6" >
-            <FavoriteStamp favoriteItems={this.state.favorites} unfavorite={this.unfavorite} />
-          </div>
+          {imageList.map((item, index) => {
+            if (typeof document !== 'undefined') {
+              return (<FavoritableStamp favoriteChanged={this.favoriteChanged} key={index} imageSrc={item.image} title={item.title} />);
+            }
+              return (<Stamp key={index} imageSrc={item.image} title={item.title} />);
+          }
+        )}
+          {favoriteStamp}
         </div>
         <div className="row">
           {data.footer.map((item, index) => <div key={index} className="col-3"><Footer label={item.label} items={item.items} /></div>)}

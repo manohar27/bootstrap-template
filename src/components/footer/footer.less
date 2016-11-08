@@ -19,13 +19,13 @@
     }
     &:hover, &:focus{
       text-decoration:underline;
-      background-image: linear-gradient(to bottom,@blue1,@white);
+      box-shadow:0px 2px 2px 1px @grey1;
     }
   }
   .hidden-footer-checkbox{
     opacity:0;
     &:focus ~ .group-label {
-      background-image: linear-gradient(to bottom,@blue1,@white);
+      border: solid 1px @grey2;
 
     }
   }
@@ -40,8 +40,8 @@
       }
     }
     ~ .group-label .plus-icon:before{
-      transform: rotate(180deg);
-      content:'-';
+      transform: rotate(45deg);
+      color: @red1;
     }
   }
 .footer-link-group{

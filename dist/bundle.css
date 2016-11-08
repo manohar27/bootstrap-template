@@ -600,15 +600,18 @@ table {
   transition: opacity 300ms ease-in;
 }
 .favorite-stamp .favorite-list-group .favorite-list-item {
+  background-color: #ccc;
   color: #fff;
-  background-color: #000;
-  opacity: 0.6;
+  font-weight: bold;
+  background-position: center;
+  background-blend-mode: multiply;
   width: 100%;
   font-family: 'Ubuntu-Italics';
   font-size: 32px;
   padding: 4px 4px 4px 4px;
   border-radius: 5px;
   margin: 8px 0px 8px 0px;
+  transition: transform 0.3s linear;
 }
 .favorite-stamp .favorite-list-group .favorite-list-item .close-icon {
   line-height: 20px;
@@ -631,6 +634,10 @@ table {
   border: 1px solid #cc3333;
   box-shadow: 0 0 10px 0 #cc3333;
   background-position: center;
+}
+.favorite-stamp .favorite-list-group .favorite-list-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 5px 0 #ccc;
 }
 .favorite-stamp .favorite-list-group .favorite-list-item p {
   display: inline-block;
@@ -729,13 +736,13 @@ table {
 .group-label:hover,
 .group-label:focus {
   text-decoration: underline;
-  background-image: linear-gradient(to bottom, #008cda, #fff);
+  box-shadow: 0px 2px 2px 1px #ccc;
 }
 .hidden-footer-checkbox {
   opacity: 0;
 }
 .hidden-footer-checkbox:focus ~ .group-label {
-  background-image: linear-gradient(to bottom, #008cda, #fff);
+  border: solid 1px #666666;
 }
 .hidden-footer-checkbox:checked ~ .footer-link-group {
   height: 200px;
@@ -744,8 +751,8 @@ table {
   display: block;
 }
 .hidden-footer-checkbox:checked ~ .group-label .plus-icon:before {
-  transform: rotate(180deg);
-  content: '-';
+  transform: rotate(45deg);
+  color: #cc3333;
 }
 .footer-link-group {
   height: 0px;
