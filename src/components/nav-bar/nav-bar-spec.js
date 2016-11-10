@@ -21,7 +21,7 @@ describe('Navbar Spec', () => {
     output = render(<NavBar list={mockData.navList} />);
   });
  it('should have correct class', () => {
-    const element = findWithClass(output, 'navbar');
+    const element = findWithClass(output, 'navbarA');
     expect(element.props.className.split(" ")).toContain('navbar');
   });
  it('should have 4 menu items', () => {

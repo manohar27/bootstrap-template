@@ -57,17 +57,423 @@
     "Milk",
     "Cosmetics"
   ],
-  "logo": "BOOMBasket!",
-  "heading": "Easy Grocery Shopping",
+  "logo": "ThePhoneShop",
+  "heading": "Exciting offers on smartphones",
   "copyright": "Copyright @jz21",
   "carouselImages": [
-    "Household.jpg",
-    "Coffee.jpg",
-    "Beverages.jpg"
+    "pixelXL.jpg",
+    "xperiaXL.jpg",
+    "droidXL.jpg"
   ],
   "carouselLabels": [
-    "Grab 10% discount on all Household products",
-    "Hmmmm.. Coffee..",
-    "Buy one get one! on beverages"
-  ]
+    "Grab 10% discount on the new Google Pixel XL",
+    "Water Resistant & 4k display - Xperia Z3",
+    "Shatterproof screen only on Moto X turbo"
+  ],
+  "stampList": [
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  }
+]
 }

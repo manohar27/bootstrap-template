@@ -6,6 +6,7 @@ import Stamp from '../stamp';
 import FavoriteStamp from '../favorite-stamp';
 import Footer from '../footer';
 import JSCarousel from '../carouselJS';
+import Paginator from '../paginator';
 
 class Page extends React.Component {
   constructor(props) {
@@ -55,7 +56,7 @@ class Page extends React.Component {
       <div className="grid">
         <h2 className="page-heading">{data.heading}</h2>
         {carousel}
-        <div className="row">
+        {/*<div className="row">
           {imageList.map((item, index) => {
             if (typeof document !== 'undefined') {
               return (<FavoritableStamp favoriteChanged={this.favoriteChanged} key={index} imageSrc={item.image} title={item.title} />);
@@ -64,6 +65,9 @@ class Page extends React.Component {
           }
         )}
           {favoriteStamp}
+        </div>*/}
+        <div className="row">
+          <Paginator item="Stamp" itemList={data.stampList} pageSize={16} />
         </div>
         <div className="row">
           {data.footer.map((item, index) => <div key={index} className="col-3"><Footer label={item.label} items={item.items} /></div>)}

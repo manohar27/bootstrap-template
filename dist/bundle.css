@@ -1087,6 +1087,56 @@ body {
   font-family: 'Ubuntu-Italics';
   src: url('Ubuntu-LightItalic.ttf');
 }
+.paginator-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.paginator-wrapper .button {
+  position: absolute;
+  bottom: -20px;
+  font-family: 'Ubuntu-Italics';
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.paginator-wrapper .button:hover {
+  box-shadow: 0px 0px 5px 0px #008cda;
+}
+.paginator-wrapper .next-button {
+  position: absolute;
+  bottom: -20px;
+  font-family: 'Ubuntu-Italics';
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  right: 0px;
+}
+.paginator-wrapper .next-button:hover {
+  box-shadow: 0px 0px 5px 0px #008cda;
+}
+.paginator-wrapper .prev-button {
+  position: absolute;
+  bottom: -20px;
+  font-family: 'Ubuntu-Italics';
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  left: 0px;
+}
+.paginator-wrapper .prev-button:hover {
+  box-shadow: 0px 0px 5px 0px #008cda;
+}
+
+@font-face {
+  font-family: 'Ubuntu-Regular';
+  src: url('Ubuntu-Regular.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu-Italics';
+  src: url('Ubuntu-LightItalic.ttf');
+}
 .stamp {
   cursor: pointer;
   text-align: center;
