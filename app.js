@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('dist'));
 const server = app.listen(process.env.PORT || 3000, () => {
   const serverAddress = server.address();
-  console.log(`express server started @ ${serverAddress.port}`);
+  console.log('server started');
 });
 fetch('http://localhost:3000/mock-content.json')
     .then((response) => {
@@ -21,9 +21,11 @@ fetch('http://localhost:3000/mock-content.json')
         return response.json();
     })
     .then((props) => {
-      const getReactMarkUp = ReactDomServer.renderToString(<App data={props} />);
+      const getReactMarkUp = ReactDomServer.renderToStaticMarkup(<App data={props} />);
+      props = JSON.stringify(props);
+      props = new Buffer(props).toString('base64');
       app.get('', (req, res) => {
-      res.render('index', {ReactContainer: getReactMarkUp, pageContent: JSON.stringify(props) });
+      res.render('index', {ReactContainer: getReactMarkUp, pageContent: props });
     });
     });
 

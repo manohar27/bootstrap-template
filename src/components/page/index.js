@@ -67,7 +67,7 @@ class Page extends React.Component {
           {favoriteStamp}
         </div>*/}
         <div className="row">
-          <Paginator item="Stamp" itemList={data.stampList} pageSize={16} />
+          <Paginator item="Stamp" itemList={data.stampList} pageSize={8} />
         </div>
         <div className="row">
           {data.footer.map((item, index) => <div key={index} className="col-3"><Footer label={item.label} items={item.items} /></div>)}

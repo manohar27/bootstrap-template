@@ -72,124 +72,44 @@
   ],
   "stampList": [
   {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
+    "title": "Xiaomi Mi Mix",
+    "imageSrc": "xiaomi.jpg"
   },
   {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
+    "title": "Xiaomi Mi Mix",
+    "imageSrc": "xiaomi.jpg"
   },
   {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
+    "title": "Samsung Note Edge",
+    "imageSrc": "samsungNoteEdge.jpg"
   },
   {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
+    "title": "Xiaomi Mi Mix",
+    "imageSrc": "xiaomi.jpg"
   },
   {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
+    "title": "Lumia 950",
+    "imageSrc": "lumia950.jpg"
   },
   {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
+    "title": "Samsung S7 Edge",
+    "imageSrc": "samsungS7.jpg"
   },
   {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
+    "title": "One Plus 3",
+    "imageSrc": "oneplus3.jpg"
   },
   {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
-  },
-  {
-    "title": "Sony Xperia Z3",
-    "imageSrc": "xperia.jpg"
+    "title": "Samsung Note Edge",
+    "imageSrc": "samsungNoteEdge.jpg"
   },
   {
     "title": "HTC 10",
     "imageSrc": "htc.jpg"
   },
   {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
-  },
-  {
-    "title": "HTC 10",
-    "imageSrc": "htc.jpg"
-  },
-  {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
-  },
-  {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
-  },
-  {
-    "title": "Sony Xperia Z3",
-    "imageSrc": "xperia.jpg"
-  },
-  {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
-  },
-  {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
-  },
-  {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
-  },
-  {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
-  },
-  {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
-  },
-  {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
-  },
-  {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
-  },
-  {
-    "title": "Sony Xperia Z3",
-    "imageSrc": "xperia.jpg"
-  },
-  {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
-  },
-  {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
-  },
-  {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
-  },
-  {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
-  },
-  {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
-  },
-  {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
-  },
-  {
-    "title": "HTC 10",
-    "imageSrc": "htc.jpg"
+    "title": "Samsung Note Edge",
+    "imageSrc": "samsungNoteEdge.jpg"
   },
   {
     "title": "HTC 10",
@@ -204,28 +124,16 @@
     "imageSrc": "iphone.jpg"
   },
   {
-    "title": "HTC 10",
-    "imageSrc": "htc.jpg"
+    "title": "Samsung S7 Edge",
+    "imageSrc": "samsungS7.jpg"
   },
   {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
+    "title": "Xiaomi Mi Mix",
+    "imageSrc": "xiaomi.jpg"
   },
   {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
-  },
-  {
-    "title": "HTC 10",
-    "imageSrc": "htc.jpg"
-  },
-  {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
-  },
-  {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
   },
   {
     "title": "Sony Xperia Z3",
@@ -236,80 +144,76 @@
     "imageSrc": "moto.jpg"
   },
   {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
+    "title": "Lumia 950",
+    "imageSrc": "lumia950.jpg"
   },
   {
-    "title": "HTC 10",
-    "imageSrc": "htc.jpg"
+    "title": "Samsung Note Edge",
+    "imageSrc": "samsungNoteEdge.jpg"
+  },
+  {
+    "title": "Samsung Note Edge",
+    "imageSrc": "samsungNoteEdge.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Lenovo Vibe K4",
+    "imageSrc": "lenovo.jpg"
+  },
+  {
+    "title": "Huawei Honor 8",
+    "imageSrc": "huawei.jpg"
+  },
+  {
+    "title": "Huawei Honor 8",
+    "imageSrc": "huawei.jpg"
   },
   {
     "title": "Moto X Style",
     "imageSrc": "moto.jpg"
   },
   {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
-  },
-  {
-    "title": "HTC 10",
-    "imageSrc": "htc.jpg"
-  },
-  {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
-  },
-  {
-    "title": "Sony Xperia Z3",
-    "imageSrc": "xperia.jpg"
-  },
-  {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
-  },
-  {
-    "title": "Sony Xperia Z3",
-    "imageSrc": "xperia.jpg"
-  },
-  {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
-  },
-  {
-    "title": "Sony Xperia Z3",
-    "imageSrc": "xperia.jpg"
-  },
-  {
-    "title": "Sony Xperia Z3",
-    "imageSrc": "xperia.jpg"
-  },
-  {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
-  },
-  {
     "title": "Moto X Style",
     "imageSrc": "moto.jpg"
   },
   {
-    "title": "HTC 10",
-    "imageSrc": "htc.jpg"
+    "title": "Moto Z",
+    "imageSrc": "motoZ.jpg"
   },
   {
     "title": "Sony Xperia Z3",
     "imageSrc": "xperia.jpg"
   },
   {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
+    "title": "Samsung S7 Edge",
+    "imageSrc": "samsungS7.jpg"
   },
   {
-    "title": "HTC 10",
-    "imageSrc": "htc.jpg"
+    "title": "Lenovo Vibe K4",
+    "imageSrc": "lenovo.jpg"
   },
   {
-    "title": "HTC 10",
-    "imageSrc": "htc.jpg"
+    "title": "Lumia 950",
+    "imageSrc": "lumia950.jpg"
+  },
+  {
+    "title": "One Plus 3",
+    "imageSrc": "oneplus3.jpg"
+  },
+  {
+    "title": "Huawei Honor 8",
+    "imageSrc": "huawei.jpg"
+  },
+  {
+    "title": "Samsung Note Edge",
+    "imageSrc": "samsungNoteEdge.jpg"
+  },
+  {
+    "title": "Moto Z",
+    "imageSrc": "motoZ.jpg"
   },
   {
     "title": "Iphone 7",
@@ -320,124 +224,40 @@
     "imageSrc": "moto.jpg"
   },
   {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
+    "title": "Lumia 950",
+    "imageSrc": "lumia950.jpg"
   },
   {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
+    "title": "Lumia 950",
+    "imageSrc": "lumia950.jpg"
   },
   {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
+    "title": "Moto Z",
+    "imageSrc": "motoZ.jpg"
   },
   {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
-  },
-  {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
-  },
-  {
-    "title": "HTC 10",
-    "imageSrc": "htc.jpg"
-  },
-  {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
-  },
-  {
-    "title": "HTC 10",
-    "imageSrc": "htc.jpg"
-  },
-  {
-    "title": "Sony Xperia Z3",
-    "imageSrc": "xperia.jpg"
-  },
-  {
-    "title": "Sony Xperia Z3",
-    "imageSrc": "xperia.jpg"
-  },
-  {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
-  },
-  {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
-  },
-  {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
-  },
-  {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
+    "title": "One Plus 3",
+    "imageSrc": "oneplus3.jpg"
   },
   {
     "title": "Google Pixel XL",
     "imageSrc": "pixel.jpg"
   },
   {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
-  },
-  {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
-  },
-  {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
-  },
-  {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
-  },
-  {
-    "title": "Sony Xperia Z3",
-    "imageSrc": "xperia.jpg"
-  },
-  {
-    "title": "Sony Xperia Z3",
-    "imageSrc": "xperia.jpg"
+    "title": "Xiaomi Mi Mix",
+    "imageSrc": "xiaomi.jpg"
   },
   {
     "title": "Google Pixel XL",
     "imageSrc": "pixel.jpg"
   },
   {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
+    "title": "Lenovo Vibe K4",
+    "imageSrc": "lenovo.jpg"
   },
   {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
-  },
-  {
-    "title": "Sony Xperia Z3",
-    "imageSrc": "xperia.jpg"
-  },
-  {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
-  },
-  {
-    "title": "HTC 10",
-    "imageSrc": "htc.jpg"
-  },
-  {
-    "title": "Google Pixel XL",
-    "imageSrc": "pixel.jpg"
-  },
-  {
-    "title": "Moto X Style",
-    "imageSrc": "moto.jpg"
-  },
-  {
-    "title": "HTC 10",
-    "imageSrc": "htc.jpg"
+    "title": "Lenovo Vibe K4",
+    "imageSrc": "lenovo.jpg"
   },
   {
     "title": "HTC 10",
@@ -448,6 +268,42 @@
     "imageSrc": "xperia.jpg"
   },
   {
+    "title": "Xiaomi Mi Mix",
+    "imageSrc": "xiaomi.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Samsung S7 Edge",
+    "imageSrc": "samsungS7.jpg"
+  },
+  {
+    "title": "One Plus 3",
+    "imageSrc": "oneplus3.jpg"
+  },
+  {
+    "title": "HTC 10",
+    "imageSrc": "htc.jpg"
+  },
+  {
+    "title": "Samsung Note Edge",
+    "imageSrc": "samsungNoteEdge.jpg"
+  },
+  {
+    "title": "Lumia 950",
+    "imageSrc": "lumia950.jpg"
+  },
+  {
+    "title": "Lenovo Vibe K4",
+    "imageSrc": "lenovo.jpg"
+  },
+  {
+    "title": "Samsung Note Edge",
+    "imageSrc": "samsungNoteEdge.jpg"
+  },
+  {
     "title": "HTC 10",
     "imageSrc": "htc.jpg"
   },
@@ -456,12 +312,64 @@
     "imageSrc": "xperia.jpg"
   },
   {
+    "title": "Samsung Note Edge",
+    "imageSrc": "samsungNoteEdge.jpg"
+  },
+  {
     "title": "Moto X Style",
     "imageSrc": "moto.jpg"
   },
   {
-    "title": "Iphone 7",
-    "imageSrc": "iphone.jpg"
+    "title": "Lenovo Vibe K4",
+    "imageSrc": "lenovo.jpg"
+  },
+  {
+    "title": "Lumia 950",
+    "imageSrc": "lumia950.jpg"
+  },
+  {
+    "title": "One Plus 3",
+    "imageSrc": "oneplus3.jpg"
+  },
+  {
+    "title": "Samsung S7 Edge",
+    "imageSrc": "samsungS7.jpg"
+  },
+  {
+    "title": "Samsung Note Edge",
+    "imageSrc": "samsungNoteEdge.jpg"
+  },
+  {
+    "title": "Samsung S7 Edge",
+    "imageSrc": "samsungS7.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Lenovo Vibe K4",
+    "imageSrc": "lenovo.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "One Plus 3",
+    "imageSrc": "oneplus3.jpg"
+  },
+  {
+    "title": "Huawei Honor 8",
+    "imageSrc": "huawei.jpg"
+  },
+  {
+    "title": "Samsung S7 Edge",
+    "imageSrc": "samsungS7.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
   },
   {
     "title": "Sony Xperia Z3",
@@ -474,6 +382,94 @@
   {
     "title": "Google Pixel XL",
     "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Lumia 950",
+    "imageSrc": "lumia950.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Iphone 7",
+    "imageSrc": "iphone.jpg"
+  },
+  {
+    "title": "Samsung S7 Edge",
+    "imageSrc": "samsungS7.jpg"
+  },
+  {
+    "title": "Lenovo Vibe K4",
+    "imageSrc": "lenovo.jpg"
+  },
+  {
+    "title": "Huawei Honor 8",
+    "imageSrc": "huawei.jpg"
+  },
+  {
+    "title": "Lumia 950",
+    "imageSrc": "lumia950.jpg"
+  },
+  {
+    "title": "Xiaomi Mi Mix",
+    "imageSrc": "xiaomi.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Xiaomi Mi Mix",
+    "imageSrc": "xiaomi.jpg"
+  },
+  {
+    "title": "Lenovo Vibe K4",
+    "imageSrc": "lenovo.jpg"
+  },
+  {
+    "title": "Moto X Style",
+    "imageSrc": "moto.jpg"
+  },
+  {
+    "title": "Moto Z",
+    "imageSrc": "motoZ.jpg"
+  },
+  {
+    "title": "One Plus 3",
+    "imageSrc": "oneplus3.jpg"
+  },
+  {
+    "title": "Xiaomi Mi Mix",
+    "imageSrc": "xiaomi.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Lenovo Vibe K4",
+    "imageSrc": "lenovo.jpg"
+  },
+  {
+    "title": "Sony Xperia Z3",
+    "imageSrc": "xperia.jpg"
+  },
+  {
+    "title": "Moto Z",
+    "imageSrc": "motoZ.jpg"
+  },
+  {
+    "title": "Google Pixel XL",
+    "imageSrc": "pixel.jpg"
+  },
+  {
+    "title": "Lumia 950",
+    "imageSrc": "lumia950.jpg"
+  },
+  {
+    "title": "Huawei Honor 8",
+    "imageSrc": "huawei.jpg"
   }
 ]
 }
