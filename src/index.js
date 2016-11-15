@@ -11,7 +11,7 @@ export default App;
 
 if (typeof document !== 'undefined') {
   let props = document.getElementById('page-content').getAttribute('data-content');
-  props = atob(props+'');
+  props = atob(props);
   props = JSON.parse(props);
   render(<App data={props} />, document.getElementById('app'));
 }

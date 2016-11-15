@@ -7,6 +7,14 @@
 @blue3 : #00539f;
 @blue2 : #00294f;
 @grey3 : #333;
+@error: #cc3333;
+@ddl-label: #333333;
+@default-keyline: #666666;
+@ddl-blue1: #008dc8;
+@ddl-blue2: #009cda;
+@focus-keyline: #008dcd;
+
+
 @font-face{
 	font-family: 'Ubuntu-Regular';
 	src: url('./Ubuntu-Regular.ttf');
@@ -15,4 +23,16 @@
 @font-face{
 	font-family: 'Ubuntu-Italics';
 	src: url('./Ubuntu-LightItalic.ttf');
+}
+
+@font-face {
+  font-family: "tesco-icons";
+  src: url(tesco-icons.woff);
+}
+
+
+
+.error-state {
+  border:1px solid @error;
+  box-shadow: 0 0 0 4px rgba(204,51,51,0.2);
 }

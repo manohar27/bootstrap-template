@@ -6,6 +6,14 @@
   font-family: 'Ubuntu-Italics';
   src: url('Ubuntu-LightItalic.ttf');
 }
+@font-face {
+  font-family: "tesco-icons";
+  src: url(tesco-icons.woff);
+}
+.error-state {
+  border: 1px solid #cc3333;
+  box-shadow: 0 0 0 4px rgba(204, 51, 51, 0.2);
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -143,6 +151,14 @@ table {
 @font-face {
   font-family: 'Ubuntu-Italics';
   src: url('Ubuntu-LightItalic.ttf');
+}
+@font-face {
+  font-family: "tesco-icons";
+  src: url(tesco-icons.woff);
+}
+.error-state {
+  border: 1px solid #cc3333;
+  box-shadow: 0 0 0 4px rgba(204, 51, 51, 0.2);
 }
 .carousel-wrapper {
   position: relative;
@@ -355,6 +371,14 @@ table {
   font-family: 'Ubuntu-Italics';
   src: url('Ubuntu-LightItalic.ttf');
 }
+@font-face {
+  font-family: "tesco-icons";
+  src: url(tesco-icons.woff);
+}
+.error-state {
+  border: 1px solid #cc3333;
+  box-shadow: 0 0 0 4px rgba(204, 51, 51, 0.2);
+}
 .jscarousel-wrapper {
   position: relative;
   height: 300px;
@@ -543,6 +567,99 @@ table {
   font-family: 'Ubuntu-Italics';
   src: url('Ubuntu-LightItalic.ttf');
 }
+@font-face {
+  font-family: "tesco-icons";
+  src: url(tesco-icons.woff);
+}
+.error-state {
+  border: 1px solid #cc3333;
+  box-shadow: 0 0 0 4px rgba(204, 51, 51, 0.2);
+}
+.dropDownComponent {
+  font-size: 16px;
+  position: relative;
+  display: block;
+  text-align: right;
+  width: 100%;
+}
+.dropDownComponent .dropDownLabel {
+  line-height: 32px;
+  color: #333333;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+}
+.dropDownComponent .dropDownWrapper {
+  position: relative;
+  display: inline-block;
+}
+.dropDownComponent .dropDown {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: block;
+  border: 1px solid #666666;
+  background-color: #ffffff;
+  height: 40px;
+  padding: 0 32px 0 12px;
+  color: #666666;
+  z-index: 2;
+  font-size: 16px;
+  transition: box-shadow 0.3s;
+}
+.dropDownComponent .dropDownWrapper:after {
+  color: #666;
+  font-size: 12px;
+  line-height: 40px;
+  pointer-events: none;
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  z-index: 2;
+  font-family: "tesco-icons";
+  content: "\E011";
+}
+.dropDownComponent .dropDown:focus {
+  border: 1px solid #009cda;
+  box-shadow: 0 0 0 4px rgba(0, 141, 200, 0.4);
+}
+.dropDownComponent .dropDown.hasValue:focus {
+  border: 1px solid #009cda;
+  box-shadow: 0 0 0 4px rgba(0, 141, 200, 0.4);
+}
+.dropDownComponent .dropDown.error {
+  border: 1px solid #cc3333;
+}
+.dropDownComponent .dropDown.error:focus {
+  border-color: #cc3333;
+  box-shadow: 0 0 0 4px rgba(204, 51, 51, 0.2);
+}
+.dropDownComponent .dropDownLabel.error {
+  color: #cc3333;
+}
+.dropDownComponent .error-label {
+  color: #cc3333;
+  display: block;
+  line-height: 32px;
+}
+
+@font-face {
+  font-family: 'Ubuntu-Regular';
+  src: url('Ubuntu-Regular.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu-Italics';
+  src: url('Ubuntu-LightItalic.ttf');
+}
+@font-face {
+  font-family: "tesco-icons";
+  src: url(tesco-icons.woff);
+}
+.error-state {
+  border: 1px solid #cc3333;
+  box-shadow: 0 0 0 4px rgba(204, 51, 51, 0.2);
+}
 .fav-button {
   position: absolute;
   bottom: 20px;
@@ -568,6 +685,14 @@ table {
 @font-face {
   font-family: 'Ubuntu-Italics';
   src: url('Ubuntu-LightItalic.ttf');
+}
+@font-face {
+  font-family: "tesco-icons";
+  src: url(tesco-icons.woff);
+}
+.error-state {
+  border: 1px solid #cc3333;
+  box-shadow: 0 0 0 4px rgba(204, 51, 51, 0.2);
 }
 .favorite-stamp {
   border: 1px solid #ccc;
@@ -697,6 +822,14 @@ table {
   font-family: 'Ubuntu-Italics';
   src: url('Ubuntu-LightItalic.ttf');
 }
+@font-face {
+  font-family: "tesco-icons";
+  src: url(tesco-icons.woff);
+}
+.error-state {
+  border: 1px solid #cc3333;
+  box-shadow: 0 0 0 4px rgba(204, 51, 51, 0.2);
+}
 .fav-button {
   position: absolute;
   bottom: 20px;
@@ -722,6 +855,14 @@ table {
 @font-face {
   font-family: 'Ubuntu-Italics';
   src: url('Ubuntu-LightItalic.ttf');
+}
+@font-face {
+  font-family: "tesco-icons";
+  src: url(tesco-icons.woff);
+}
+.error-state {
+  border: 1px solid #cc3333;
+  box-shadow: 0 0 0 4px rgba(204, 51, 51, 0.2);
 }
 .group-label {
   font-weight: bold;
@@ -834,6 +975,14 @@ table {
 @font-face {
   font-family: 'Ubuntu-Italics';
   src: url('Ubuntu-LightItalic.ttf');
+}
+@font-face {
+  font-family: "tesco-icons";
+  src: url(tesco-icons.woff);
+}
+.error-state {
+  border: 1px solid #cc3333;
+  box-shadow: 0 0 0 4px rgba(204, 51, 51, 0.2);
 }
 @media only screen and (max-width: 560px) {
   .navbar {
@@ -1009,6 +1158,14 @@ table {
   font-family: 'Ubuntu-Italics';
   src: url('Ubuntu-LightItalic.ttf');
 }
+@font-face {
+  font-family: "tesco-icons";
+  src: url(tesco-icons.woff);
+}
+.error-state {
+  border: 1px solid #cc3333;
+  box-shadow: 0 0 0 4px rgba(204, 51, 51, 0.2);
+}
 body {
   font-family: 'Ubuntu-Regular';
   background-color: #fff;
@@ -1095,6 +1252,14 @@ body {
   font-family: 'Ubuntu-Italics';
   src: url('Ubuntu-LightItalic.ttf');
 }
+@font-face {
+  font-family: "tesco-icons";
+  src: url(tesco-icons.woff);
+}
+.error-state {
+  border: 1px solid #cc3333;
+  box-shadow: 0 0 0 4px rgba(204, 51, 51, 0.2);
+}
 .paginator-wrapper {
   display: inline-block;
   position: relative;
@@ -1144,6 +1309,14 @@ body {
 @font-face {
   font-family: 'Ubuntu-Italics';
   src: url('Ubuntu-LightItalic.ttf');
+}
+@font-face {
+  font-family: "tesco-icons";
+  src: url(tesco-icons.woff);
+}
+.error-state {
+  border: 1px solid #cc3333;
+  box-shadow: 0 0 0 4px rgba(204, 51, 51, 0.2);
 }
 .stamp {
   cursor: pointer;

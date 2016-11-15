@@ -1,4 +1,5 @@
 import ReactDomServer from 'react-dom/server';
+import compression from 'compression';
 import React from 'react';
 import express from 'express';
 import path from 'path';
@@ -6,6 +7,7 @@ import fetch from 'isomorphic-fetch';
 import App from './src/index';
 
 const app = express();
+app.use(compression());
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 app.use(express.static('dist'));

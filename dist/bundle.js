@@ -77,7 +77,7 @@
 	
 	if (typeof document !== 'undefined') {
 	  var props = document.getElementById('page-content').getAttribute('data-content');
-	  props = atob(props + '');
+	  props = atob(props);
 	  props = JSON.parse(props);
 	  (0, _reactDom.render)(_react2.default.createElement(App, { data: props }), document.getElementById('app'));
 	}
@@ -22563,19 +22563,19 @@
 	  value: true
 	});
 	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _react = __webpack_require__(/*! react */ 1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _components = __webpack_require__(/*! ../../components */ 181);
+	var _page = __webpack_require__(/*! ./page */ 181);
 	
-	var components = _interopRequireWildcard(_components);
+	var _page2 = _interopRequireDefault(_page);
 	
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	var _dropdownList = __webpack_require__(/*! ../dropdown-list */ 183);
+	
+	var _dropdownList2 = _interopRequireDefault(_dropdownList);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -22602,13 +22602,13 @@
 	  _createClass(Paginator, [{
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
-	      this.state = { startIndex: 0 };
+	      this.state = { startIndex: 0, pageSize: this.props.pageSize };
 	    }
 	  }, {
 	    key: 'showNextPage',
 	    value: function showNextPage() {
 	      var currentStartIndex = this.state.startIndex;
-	      this.setState({ startIndex: currentStartIndex + this.props.pageSize });
+	      this.setState({ startIndex: currentStartIndex + this.state.pageSize, pageSize: this.state.pageSize });
 	      this.scrollToTop();
 	    }
 	  }, {
@@ -22616,7 +22616,7 @@
 	    value: function scrollToTop() {
 	      var _this2 = this;
 	
-	      if (window.scrollY !== 0 && this.props.pageSize > 10) {
+	      if (window.scrollY !== 0 && this.state.pageSize > 10) {
 	        setTimeout(function () {
 	          window.scrollTo(0, window.scrollY - 30);
 	          _this2.scrollToTop();
@@ -22627,15 +22627,16 @@
 	    key: 'showPrevPage',
 	    value: function showPrevPage() {
 	      var currentStartIndex = this.state.startIndex;
-	      this.setState({ startIndex: currentStartIndex - this.props.pageSize });
+	      this.setState({ startIndex: currentStartIndex - this.props.pageSize, pageSize: this.state.pageSize });
 	      this.scrollToTop();
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var _this3 = this;
+	
 	      var prevButton = void 0;
 	      var nextButton = void 0;
-	      var Component = components[this.props.item];
 	      if (this.state.startIndex !== 0) {
 	        prevButton = _react2.default.createElement(
 	          'button',
@@ -22643,20 +22644,24 @@
 	          'Previous'
 	        );
 	      }
-	      if (this.state.startIndex + this.props.pageSize < this.props.itemList.length) {
+	      if (this.state.startIndex + this.state.pageSize < this.props.itemList.length) {
 	        nextButton = _react2.default.createElement(
 	          'button',
 	          { className: 'next-button', onClick: this.showNextPage },
 	          'Next'
 	        );
 	      }
-	      var itemList = this.props.itemList.slice(this.state.startIndex, this.props.pageSize + this.state.startIndex);
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'paginator-wrapper' },
-	        itemList.map(function (item, index) {
-	          return _react2.default.createElement(Component, _extends({ key: index }, item));
-	        }),
+	        _react2.default.createElement(_dropdownList2.default, {
+	          title: 'Select page size',
+	          list: [10, 20, 30],
+	          defaultValue: 8,
+	          changeHandler: function changeHandler(size) {
+	            return _this3.setState({ startIndex: _this3.state.startIndex, pageSize: parseInt(size) });
+	          } }),
+	        _react2.default.createElement(_page2.default, { component: this.props.item, itemList: this.props.itemList, startIndex: this.state.startIndex, pageSize: this.state.pageSize }),
 	        prevButton,
 	        nextButton
 	      );
@@ -22676,6 +22681,47 @@
 
 /***/ },
 /* 181 */
+/*!******************************************!*\
+  !*** ./src/components/paginator/page.js ***!
+  \******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _components = __webpack_require__(/*! ../../components */ 182);
+	
+	var components = _interopRequireWildcard(_components);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Page = function Page(props) {
+	  var Component = components[props.component];
+	  var itemList = props.itemList.slice(props.startIndex, props.pageSize + props.startIndex);
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    itemList.map(function (itemProps, index) {
+	      return _react2.default.createElement(Component, _extends({ key: index }, itemProps));
+	    })
+	  );
+	};
+	
+	exports.default = Page;
+
+/***/ },
+/* 182 */
 /*!*********************************!*\
   !*** ./src/components/index.js ***!
   \*********************************/
@@ -22705,6 +22751,113 @@
 	exports.Carousel = _carouselJS2.default;
 	exports.Stamp = _stamp2.default;
 	exports.FavoritableStamp = _favoritableStamp2.default;
+
+/***/ },
+/* 183 */
+/*!***********************************************!*\
+  !*** ./src/components/dropdown-list/index.js ***!
+  \***********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var DropDownList = function (_React$Component) {
+	  _inherits(DropDownList, _React$Component);
+	
+	  function DropDownList() {
+	    _classCallCheck(this, DropDownList);
+	
+	    return _possibleConstructorReturn(this, (DropDownList.__proto__ || Object.getPrototypeOf(DropDownList)).apply(this, arguments));
+	  }
+	
+	  _createClass(DropDownList, [{
+	    key: 'selectionHandler',
+	    value: function selectionHandler() {
+	      var classname = '';
+	      if (this.props.error) classname = "error";
+	      var value = document.getElementById('dropdown').value;
+	      if (value != -1) document.getElementById('dropdown').className = "dropDown " + classname + " hasValue";else document.getElementById('dropdown').className = "dropDown " + classname;
+	      this.props.changeHandler(value);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var error = this.props.error;
+	      var list = this.props.list;
+	      var errorLabel = '';
+	      var classname = '';
+	      if (error) {
+	        classname = "error";
+	        errorLabel = _react2.default.createElement(
+	          'span',
+	          { className: 'error-label' },
+	          ' ',
+	          error,
+	          ' '
+	        );
+	      }
+	      return _react2.default.createElement(
+	        'span',
+	        { className: 'dropDownComponent' },
+	        _react2.default.createElement(
+	          'label',
+	          { className: "dropDownLabel " + classname },
+	          this.props.title
+	        ),
+	        _react2.default.createElement(
+	          'span',
+	          { className: 'dropDownWrapper' },
+	          _react2.default.createElement(
+	            'select',
+	            { id: 'dropdown', className: "dropDown " + classname, defaultValue: '0', onChange: this.selectionHandler.bind(this) },
+	            _react2.default.createElement(
+	              'option',
+	              { key: 'default', value: this.props.defaultValue },
+	              this.props.defaultValue
+	            ),
+	            list.map(function (item, index) {
+	              return _react2.default.createElement(
+	                'option',
+	                { key: index, value: item },
+	                item
+	              );
+	            })
+	          )
+	        ),
+	        errorLabel
+	      );
+	    }
+	  }]);
+	
+	  return DropDownList;
+	}(_react2.default.Component);
+	
+	DropDownList.propTypes = {
+	  list: _react2.default.PropTypes.array.isRequired,
+	  error: _react2.default.PropTypes.string,
+	  title: _react2.default.PropTypes.string,
+	  defaultValue: _react2.default.PropTypes.string
+	};
+	
+	exports.default = DropDownList;
 
 /***/ }
 /******/ ]);
